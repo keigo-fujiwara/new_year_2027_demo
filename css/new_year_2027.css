@@ -761,15 +761,20 @@ li:last-child .fv__area {
 }
 
 @media (max-width: 767px) {
+  body {
+    padding-bottom: calc(68px + env(safe-area-inset-bottom));
+  }
   .fv {
     background: #1e6400;
     border-bottom: 0;
     color: #fff;
     display: grid;
-    grid-template-areas: "logo" "catch" "areas" "video" "actions";
+    grid-template-areas: "logo" "catch" "areas" "video";
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto minmax(0, 1fr) auto;
-    min-height: 560px;
+    grid-template-rows: auto auto auto minmax(0, 1fr);
+    height: calc(100vh - 68px);
+    height: calc(100svh - 68px);
+    min-height: 492px;
   }
   .fv__media, .fv__panel {
     display: contents;
@@ -849,11 +854,17 @@ li:last-child .fv__area {
     transform: rotate(5deg);
   }
   .fv__actions {
+    background: #1e6400;
+    bottom: 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.12);
     flex-direction: row;
     gap: 10px;
-    grid-area: actions;
+    left: 0;
     margin-top: 0;
-    padding: 10px 8px;
+    padding: 10px 8px calc(10px + env(safe-area-inset-bottom));
+    position: fixed;
+    right: 0;
+    z-index: 100;
   }
   .fv__btn {
     flex: 1 1 0;
@@ -1357,6 +1368,11 @@ html.is-modal-open {
   }
 }
 
+@media (max-width: 767px) {
+  .cta {
+    display: none;
+  }
+}
 .flow {
   background: radial-gradient(ellipse 360px 320px at 0 0, rgba(135, 190, 228, 0.95) 0%, rgba(135, 190, 228, 0) 100%), #f0fde6;
   padding: 56px 20px 64px;
@@ -2663,5 +2679,11 @@ html.is-modal-open {
   }
   .line-follow__text {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .line-follow {
+    display: none;
   }
 }
