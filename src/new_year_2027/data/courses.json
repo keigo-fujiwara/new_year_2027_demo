@@ -1,0 +1,121 @@
+{
+    "courses": [
+        {
+            "id": "shooting",
+            "title": "シューティングゲーム",
+            "description": [
+                "未来の技術を支える人気言語Pythonを使い、誰もが熱中するシューティングゲームを自分の手でゼロから作り上げます！",
+                "プレイヤーや弾の動きを、コードを書いて実現する達成感は別格です！",
+                "難しい文法から入るのではなく、「ゲームを作る」という一番楽しいところから学べるので「わかる！」「できる！」がどんどん増えていきます。"
+            ],
+            "works": [
+                {
+                    "src": "../assets/images/new_year_2027/jpg/work_shooting.jpg",
+                    "alt": "シューティングゲームの作品画面"
+                },
+                {
+                    "src": "../assets/images/new_year_2027/jpg/work_shooting2.jpg",
+                    "alt": "シューティングゲームの制作画面"
+                }
+            ],
+            "scheduleEvents": ["シューティングゲーム"]
+        },
+        {
+            "id": "web",
+            "title": "webページ開発体験",
+            "description": [
+                "誰もが毎日目にしているWebサイトを、骨組みであるHTMLと、見た目を整えるCSSという2つの基本言語を使い、作り上げます！",
+                "Webの仕組みを分解しながら学べるので「なぜそうなるのか」がすぐに理解でき、「わかる！」「楽しい！」がどんどん増えていきます。",
+                "自分のアイデアをカタチにし、世界に1つだけのWebサイトを作り上げるクリエイティブな達成感を味わいます。"
+            ],
+            "works": [
+                {
+                    "src": "../assets/images/new_year_2027/jpg/work_web.jpg",
+                    "alt": "Webページの作品"
+                },
+                {
+                    "src": "../assets/images/new_year_2027/jpg/OriginalWebPage.jpg",
+                    "alt": "Webページの制作画面"
+                }
+            ],
+            "scheduleEvents": ["オリジナルwebページ"]
+        },
+        {
+            "id": "scraping",
+            "title": "Pythonで情報収集自動化",
+            "description": [
+                "PythonはWebからデータ収集（スクレイピング）することもできます。",
+                "Pythonで情報収集を自動化させれば、人間が手作業で行えば数日かかるような作業を、プログラムなら数分、あるいは数秒で終わらせる技術を得られます。"
+            ],
+            "works": [
+                {
+                    "src": "../assets/images/new_year_2027/jpg/work_scraping.jpg",
+                    "alt": "情報収集プログラムの作品"
+                },
+                {
+                    "src": "",
+                    "alt": ""
+                }
+            ],
+            "scheduleEvents": ["情報収集の自動化"]
+        },
+        {
+            "id": "cryptography",
+            "title": "Pythonで暗号解読",
+            "description": [
+                "暗号化と解読の仕組みを学び、自分で暗号を作ってみましょう。情報を守る技術の基本を学びます。"
+            ],
+            "works": [
+                {
+                    "src": "../assets/images/new_year_2027/jpg/Cryptography.jpg",
+                    "alt": "暗号解読プログラムの作品"
+                },
+                {
+                    "src": "",
+                    "alt": ""
+                }
+            ],
+            "scheduleEvents": ["暗号解読"]
+        },
+        {
+            "id": "kyoto-tour",
+            "title": "京都大学 見学会",
+            "description": [
+                "現役大学生が大学キャンパスを案内！未来への夢が広がる特別な体験を親子で楽しめます。",
+                "体験講座と同時開催のため、講座とあわせてご参加いただけます。"
+            ],
+            "worksTitle": "過去の見学会の様子",
+            "works": [
+                {
+                    "src": "../assets/images/new_year_2027/jpg/kyoto_univ_tour.jpg",
+                    "alt": "京都大学 見学会の様子"
+                },
+                {
+                    "src": "../assets/images/new_year_2027/png/univ_tour.png",
+                    "alt": "大学キャンパスを見学する参加者"
+                }
+            ],
+            "scheduleEvents": ["京都大学見学会"]
+        },
+        {
+            "id": "tokyo-tour",
+            "title": "東京大学 見学会",
+            "description": [
+                "現役大学生が大学キャンパスを案内！未来への夢が広がる特別な体験を親子で楽しめます。",
+                "体験講座と同時開催のため、講座とあわせてご参加いただけます。"
+            ],
+            "worksTitle": "過去の見学会の様子",
+            "works": [
+                {
+                    "src": "../assets/images/new_year_2027/png/univ_tour.png",
+                    "alt": "大学キャンパスを見学する参加者"
+                },
+                {
+                    "src": "",
+                    "alt": ""
+                }
+            ],
+            "scheduleEvents": ["東京大学見学会"]
+        }
+    ]
+}

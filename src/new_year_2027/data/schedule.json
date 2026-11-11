@@ -1,0 +1,293 @@
+{
+    "year": 2027,
+    "holidays": ["3/21", "3/22"],
+    "campuses": [
+        {
+            "key": "kyoto",
+            "label": "京都",
+            "area": "京都",
+            "name": "京大本校",
+            "photo": "../assets/images/new_year_2027/jpg/campus_kyoto.jpg",
+            "zip": "〒606-8301",
+            "address": [
+                "京都府京都市左京区吉田泉殿町1-34",
+                "ダイショウ百万遍ビル1・2F"
+            ],
+            "access": ["出町柳駅から徒歩10分（駐輪場あり）"],
+            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.1333250670086!2d135.77621201126811!3d35.02839437269156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600109202dca3be5%3A0x47f35e4463f2494d!2zQmVFbmdpbmVlci!5e0!3m2!1sja!2sjp!4v1765620304307!5m2!1sja!2sjp"
+        },
+        {
+            "key": "osaka",
+            "label": "大阪",
+            "area": "大阪",
+            "name": "梅田校",
+            "photo": "../assets/images/new_year_2027/jpg/campus_osaka.jpg",
+            "zip": "〒530-0012",
+            "address": ["大阪府大阪市北区芝田1-4-14", "芝田町ビル5F"],
+            "access": [
+                "阪急梅田駅（茶屋町口）より北へ徒歩1分",
+                "JR大阪駅・地下鉄梅田駅（北口）5番出口より北へ徒歩3分"
+            ],
+            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.951131182369!2d135.49252504398652!3d34.70641251326531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e7bade6f89df%3A0x8766069fb44a5918!2zQmVFbmdpbmVlciDmooXnlLDmoKEg5Lit6auY55Sf44Gu44Gf44KB44Gu44OX44Ot44Kw44Op44Of44Oz44Kw5pWZ5a6k!5e0!3m2!1sja!2sjp!4v1765620343747!5m2!1sja!2sjp"
+        },
+        {
+            "key": "tokyo",
+            "label": "東京",
+            "area": "東京",
+            "name": "飯田橋校",
+            "photo": "../assets/images/new_year_2027/jpg/campus_tokyo.jpg",
+            "zip": "〒102-0071",
+            "address": [
+                "東京都千代田区富士見2-12-13",
+                "フィル・パーク Kagulab.IIDABASHI"
+            ],
+            "access": ["飯田橋駅（メトロ・JR）から徒歩5分"],
+            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.1166738270394!2d139.74175991129826!3d35.69874637246727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d0049fe7617%3A0xabc5a8acb84acc89!2zQmVFbmdpbmVlciDmnbHkuqzpo6_nlLDmqYvmoKEg5Lit6auY55Sf44Gu44Gf44KB44Gu44OX44Ot44Kw44Op44Of44Oz44Kw5pWZ5a6k!5e0!3m2!1sja!2sjp!4v1765620367911!5m2!1sja!2sjp"
+        },
+        {
+            "key": "yokohama",
+            "label": "横浜",
+            "area": "神奈川",
+            "name": "横浜校",
+            "photo": "../assets/images/new_year_2027/jpg/campus_yokohama.jpg",
+            "zip": "〒220-0012",
+            "address": [
+                "神奈川県横浜市西区みなとみらい2-2-1",
+                "横浜ランドマークタワー14F"
+            ],
+            "access": ["みなとみらい駅から徒歩2分", "桜木町駅から徒歩5分"],
+            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.99984077091!2d139.6282889112873!3d35.45479837254715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185d0050093495%3A0x8a32f66ecd6ef33c!2zQmVFbmdpbmVlciDmqKrmtZzmoKEg5Lit6auY55Sf44Gu44Gf44KB44Gu44OX44Ot44Kw44Op44Of44Oz44Kw5pWZ5a6k!5e0!3m2!1sja!2sjp!4v1765620399172!5m2!1sja!2sjp"
+        },
+        {
+            "key": "okinawa",
+            "label": "沖縄",
+            "area": "沖縄",
+            "name": "首里校",
+            "photo": "../assets/images/new_year_2027/jpg/campus_okinawa.jpg",
+            "zip": "〒903-0806",
+            "address": ["沖縄県那覇市首里汀良町1-27"],
+            "access": ["ゆいレール首里駅 徒歩3分"],
+            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.3299658128526!2d127.72102527589043!3d26.21846607706778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56bff591e2409%3A0x38f9f76599ff3cbc!2z5YCL5Yil5oyH5bCOQXhpcyDpppbph4zmoKE!5e0!3m2!1sja!2sjp!4v1776436873264!5m2!1sja!2sjp"
+        }
+    ],
+    "eventTypes": {
+        "trial": "60分の体験講座",
+        "advanced": "120分の体験講座",
+        "tour": "大学見学会"
+    },
+    "items": [
+        {
+            "campus": "kyoto",
+            "date": "3/6",
+            "events": [{ "name": "情報収集の自動化", "type": "advanced" }],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "3/7",
+            "events": [{ "name": "バイブコーディング", "type": "trial" }],
+            "time": "15:00-16:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "3/14",
+            "events": [{ "name": "バイブコーディング", "type": "trial" }],
+            "time": "15:00-16:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "3/20",
+            "events": [{ "name": "2Dランゲーム", "type": "advanced" }],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "3/21",
+            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
+            "time": "15:00-16:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "3/22",
+            "events": [
+                { "name": "シューティングゲーム", "type": "advanced" },
+                { "name": "京都大学見学会", "type": "tour" }
+            ],
+            "time": "13:00-16:00",
+            "duration": "180分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "3/28",
+            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
+            "time": "15:00-16:00",
+            "duration": "60分"
+        },
+
+        {
+            "campus": "osaka",
+            "date": "3/6",
+            "events": [{ "name": "シューティングゲーム", "type": "advanced" }],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "osaka",
+            "date": "3/7",
+            "events": [{ "name": "バイブコーディング", "type": "trial" }],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "osaka",
+            "date": "3/14",
+            "events": [{ "name": "バイブコーディング", "type": "trial" }],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "osaka",
+            "date": "3/20",
+            "events": [{ "name": "情報収集の自動化", "type": "advanced" }],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "osaka",
+            "date": "3/21",
+            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "osaka",
+            "date": "3/27",
+            "events": [{ "name": "2Dランゲーム", "type": "advanced" }],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "osaka",
+            "date": "3/28",
+            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+
+        {
+            "campus": "tokyo",
+            "date": "3/7",
+            "events": [{ "name": "バイブコーディング", "type": "trial" }],
+            "time": "12:00-13:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "3/13",
+            "events": [{ "name": "2Dランゲーム", "type": "advanced" }],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "3/14",
+            "events": [{ "name": "バイブコーディング", "type": "trial" }],
+            "time": "12:00-13:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "3/21",
+            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
+            "time": "12:00-13:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "3/22",
+            "events": [
+                { "name": "シューティングゲーム", "type": "advanced" },
+                { "name": "東京大学見学会", "type": "tour" }
+            ],
+            "time": "13:00-16:00",
+            "duration": "180分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "3/27",
+            "events": [{ "name": "情報収集の自動化", "type": "advanced" }],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "3/28",
+            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
+            "time": "12:00-13:00",
+            "duration": "60分"
+        },
+
+        {
+            "campus": "yokohama",
+            "date": "3/6",
+            "events": [{ "name": "バイブコーディング", "type": "trial" }],
+            "time": "15:00-16:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "yokohama",
+            "date": "3/13",
+            "events": [{ "name": "シューティングゲーム", "type": "advanced" }],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "yokohama",
+            "date": "3/20",
+            "events": [{ "name": "バイブコーディング", "type": "trial" }],
+            "time": "15:00-16:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "yokohama",
+            "date": "3/27",
+            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
+            "time": "15:00-16:00",
+            "duration": "60分"
+        },
+
+        {
+            "campus": "okinawa",
+            "date": "3/6",
+            "events": [{ "name": "バイブコーディング", "type": "trial" }],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "okinawa",
+            "date": "3/13",
+            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "okinawa",
+            "date": "3/20",
+            "events": [{ "name": "バイブコーディング", "type": "trial" }],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "okinawa",
+            "date": "3/27",
+            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        }
+    ]
+}
