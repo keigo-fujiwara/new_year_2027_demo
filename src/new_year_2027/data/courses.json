@@ -1,28 +1,28 @@
 {
     "courses": [
         {
-            "id": "shooting",
-            "title": "シューティングゲーム",
+            "id": "vibe",
+            "title": "バイブコーディング",
             "description": [
-                "未来の技術を支える人気言語Pythonを使い、誰もが熱中するシューティングゲームを自分の手でゼロから作り上げます！",
-                "プレイヤーや弾の動きを、コードを書いて実現する達成感は別格です！",
-                "難しい文法から入るのではなく、「ゲームを作る」という一番楽しいところから学べるので「わかる！」「できる！」がどんどん増えていきます。"
+                "AIにこんな機能が欲しいと言葉で伝えるだけで、プログラムが目の前で次々と組み上がります。",
+                "プログラミングの文法ではなく、何を作りたいかというアイデアの力でアプリを作り上げる、最新の開発スタイルを体験します。"
             ],
             "works": [
                 {
-                    "src": "../assets/images/new_year_2027/jpg/work_shooting.jpg",
-                    "alt": "シューティングゲームの作品画面"
+                    "src": "../assets/images/new_year_2027/png/vibe_coding_work.png",
+                    "alt": "バイブコーディングで中学生が作ったゲームの紹介ページ"
                 },
                 {
-                    "src": "../assets/images/new_year_2027/jpg/work_shooting2.jpg",
-                    "alt": "シューティングゲームの制作画面"
+                    "src": "../assets/images/new_year_2027/jpg/vibe_coding.jpg",
+                    "alt": "AIに言葉で指示してプログラムを作るイメージ図",
+                    "fit": "contain"
                 }
             ],
-            "scheduleEvents": ["シューティングゲーム"]
+            "scheduleEvents": ["バイブコーディング"]
         },
         {
             "id": "web",
-            "title": "webページ開発体験",
+            "title": "Webページ開発体験",
             "description": [
                 "誰もが毎日目にしているWebサイトを、骨組みであるHTMLと、見た目を整えるCSSという2つの基本言語を使い、作り上げます！",
                 "Webの仕組みを分解しながら学べるので「なぜそうなるのか」がすぐに理解でき、「わかる！」「楽しい！」がどんどん増えていきます。",
@@ -38,7 +38,7 @@
                     "alt": "Webページの制作画面"
                 }
             ],
-            "scheduleEvents": ["オリジナルwebページ"]
+            "scheduleEvents": ["Webページ開発体験"]
         },
         {
             "id": "scraping",
@@ -60,22 +60,43 @@
             "scheduleEvents": ["情報収集の自動化"]
         },
         {
-            "id": "cryptography",
-            "title": "Pythonで暗号解読",
+            "id": "mee-mee-run",
+            "title": "メェーメェーランゲーム",
             "description": [
-                "暗号化と解読の仕組みを学び、自分で暗号を作ってみましょう。情報を守る技術の基本を学びます。"
+                "このゲーム作りでは、HTML・CSSで見た目を整え、JavaScriptでゲーム要素を追加していきます。",
+                "移動やジャンプなど画面上での動きの仕組みを理解しながら、実際にコードを書いて完成させていきます。"
             ],
             "works": [
                 {
-                    "src": "../assets/images/new_year_2027/jpg/Cryptography.jpg",
-                    "alt": "暗号解読プログラムの作品"
+                    "src": "../assets/images/new_year_2027/jpg/mee_mee_run.jpg",
+                    "alt": "メェーメェーランゲームのプレイ画面"
+                },
+                {
+                    "src": "../assets/images/new_year_2027/jpg/work_2d_run.jpg",
+                    "alt": "過去の参加者が作った2Dランゲームの画面"
+                }
+            ],
+            "scheduleEvents": ["メェーメェーランゲーム"]
+        },
+        {
+            "id": "white-hacker",
+            "title": "ホワイトハッカー",
+            "description": [
+                "デジタル化が進む現代でセキュリティ対策の需要は急激に高まってきています。",
+                "脆弱なサイトに対する攻撃を防ぐことでネットワークの基礎、セキュリティ対策の基礎を習得します。"
+            ],
+            "worksTitle": "講座のイメージ",
+            "works": [
+                {
+                    "src": "../assets/images/new_year_2027/png/white_hacker.png",
+                    "alt": "White Hacker"
                 },
                 {
                     "src": "",
                     "alt": ""
                 }
             ],
-            "scheduleEvents": ["暗号解読"]
+            "scheduleEvents": ["ホワイトハッカー"]
         },
         {
             "id": "kyoto-tour",

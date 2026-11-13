@@ -9,7 +9,7 @@ import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js';
 
 const COURSES_URL = '../src/new_year_2027/data/courses.json';
 
-/** "3/22" → "3月22日(月・祝)" */
+/** "2/23" → "2月23日(火・祝)" */
 function formatDate(md, data) {
     const [m, d] = md.split('/');
     const dow = getDow(data.year, md, data.holidays || []);
@@ -23,7 +23,7 @@ function renderWorks(course) {
     return course.works
         .map((work) =>
             work.src
-                ? `<img class="course-modal__work" src="${escapeHtml(work.src)}" alt="${escapeHtml(work.alt)}" loading="lazy" decoding="async" />`
+                ? `<img class="course-modal__work${work.fit === 'contain' ? ' course-modal__work--contain' : ''}" src="${escapeHtml(work.src)}" alt="${escapeHtml(work.alt)}" loading="lazy" decoding="async" />`
                 : '<div class="course-modal__work course-modal__work--placeholder" aria-hidden="true"></div>'
         )
         .join('');

@@ -901,6 +901,17 @@ li:last-child .fv__area {
 .courses__list:last-child {
   margin-bottom: 0;
 }
+.courses__list:has(+ .courses__list) {
+  margin-bottom: 0;
+}
+.courses__list + .courses__list {
+  margin-top: 24px;
+}
+@media (max-width: 767px) {
+  .courses__list + .courses__list {
+    margin-top: 14px;
+  }
+}
 @media (max-width: 767px) {
   .courses__list {
     gap: 14px 7px;
@@ -952,6 +963,11 @@ li:last-child .fv__area {
 }
 .course-card__img--placeholder {
   background: #d9d9d9;
+}
+.course-card__img--contain {
+  background: var(--img-bg, #fff);
+  object-fit: contain;
+  padding: var(--img-pad, 10%);
 }
 .course-card__body {
   padding: 6px 10px 4px;
@@ -1157,6 +1173,12 @@ html.is-modal-open {
 }
 .course-modal__work--placeholder {
   background: #d9d9d9;
+}
+.course-modal__work--contain {
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  object-fit: contain;
+  padding: 8px;
 }
 .course-modal__schedule {
   display: grid;

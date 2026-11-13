@@ -1,6 +1,6 @@
 {
     "year": 2027,
-    "holidays": ["3/21", "3/22"],
+    "holidays": ["2/11", "2/23"],
     "campuses": [
         {
             "key": "kyoto",
@@ -78,214 +78,729 @@
     "items": [
         {
             "campus": "kyoto",
-            "date": "3/6",
-            "events": [{ "name": "情報収集の自動化", "type": "advanced" }],
-            "time": "14:00-16:00",
-            "duration": "120分"
-        },
-        {
-            "campus": "kyoto",
-            "date": "3/7",
-            "events": [{ "name": "バイブコーディング", "type": "trial" }],
-            "time": "15:00-16:00",
-            "duration": "60分"
-        },
-        {
-            "campus": "kyoto",
-            "date": "3/14",
-            "events": [{ "name": "バイブコーディング", "type": "trial" }],
-            "time": "15:00-16:00",
-            "duration": "60分"
-        },
-        {
-            "campus": "kyoto",
-            "date": "3/20",
-            "events": [{ "name": "2Dランゲーム", "type": "advanced" }],
-            "time": "14:00-16:00",
-            "duration": "120分"
-        },
-        {
-            "campus": "kyoto",
-            "date": "3/21",
-            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
-            "time": "15:00-16:00",
-            "duration": "60分"
-        },
-        {
-            "campus": "kyoto",
-            "date": "3/22",
+            "date": "2/6",
             "events": [
-                { "name": "シューティングゲーム", "type": "advanced" },
-                { "name": "京都大学見学会", "type": "tour" }
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "2/7",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "2/11",
+            "events": [
+                {
+                    "name": "メェーメェーランゲーム",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "2/13",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "2/13",
+            "events": [
+                {
+                    "name": "ホワイトハッカー",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "2/14",
+            "events": [
+                {
+                    "name": "バイブコーディング",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "2/14",
+            "events": [
+                {
+                    "name": "情報収集の自動化",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "2/20",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "2/21",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "2/23",
+            "events": [
+                {
+                    "name": "ホワイトハッカー",
+                    "type": "advanced"
+                },
+                {
+                    "name": "京都大学見学会",
+                    "type": "tour"
+                }
             ],
             "time": "13:00-16:00",
             "duration": "180分"
         },
         {
             "campus": "kyoto",
-            "date": "3/28",
-            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
-            "time": "15:00-16:00",
-            "duration": "60分"
-        },
-
-        {
-            "campus": "osaka",
-            "date": "3/6",
-            "events": [{ "name": "シューティングゲーム", "type": "advanced" }],
-            "time": "14:00-16:00",
-            "duration": "120分"
-        },
-        {
-            "campus": "osaka",
-            "date": "3/7",
-            "events": [{ "name": "バイブコーディング", "type": "trial" }],
-            "time": "11:00-12:00",
-            "duration": "60分"
-        },
-        {
-            "campus": "osaka",
-            "date": "3/14",
-            "events": [{ "name": "バイブコーディング", "type": "trial" }],
-            "time": "11:00-12:00",
-            "duration": "60分"
-        },
-        {
-            "campus": "osaka",
-            "date": "3/20",
-            "events": [{ "name": "情報収集の自動化", "type": "advanced" }],
-            "time": "14:00-16:00",
-            "duration": "120分"
-        },
-        {
-            "campus": "osaka",
-            "date": "3/21",
-            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
-            "time": "11:00-12:00",
-            "duration": "60分"
-        },
-        {
-            "campus": "osaka",
-            "date": "3/27",
-            "events": [{ "name": "2Dランゲーム", "type": "advanced" }],
-            "time": "14:00-16:00",
-            "duration": "120分"
-        },
-        {
-            "campus": "osaka",
-            "date": "3/28",
-            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
-            "time": "11:00-12:00",
-            "duration": "60分"
-        },
-
-        {
-            "campus": "tokyo",
-            "date": "3/7",
-            "events": [{ "name": "バイブコーディング", "type": "trial" }],
-            "time": "12:00-13:00",
-            "duration": "60分"
-        },
-        {
-            "campus": "tokyo",
-            "date": "3/13",
-            "events": [{ "name": "2Dランゲーム", "type": "advanced" }],
-            "time": "14:00-16:00",
-            "duration": "120分"
-        },
-        {
-            "campus": "tokyo",
-            "date": "3/14",
-            "events": [{ "name": "バイブコーディング", "type": "trial" }],
-            "time": "12:00-13:00",
-            "duration": "60分"
-        },
-        {
-            "campus": "tokyo",
-            "date": "3/21",
-            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
-            "time": "12:00-13:00",
-            "duration": "60分"
-        },
-        {
-            "campus": "tokyo",
-            "date": "3/22",
+            "date": "2/27",
             "events": [
-                { "name": "シューティングゲーム", "type": "advanced" },
-                { "name": "東京大学見学会", "type": "tour" }
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "kyoto",
+            "date": "2/28",
+            "events": [
+                {
+                    "name": "バイブコーディング",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "osaka",
+            "date": "2/6",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "osaka",
+            "date": "2/7",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "osaka",
+            "date": "2/11",
+            "events": [
+                {
+                    "name": "メェーメェーランゲーム",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "osaka",
+            "date": "2/13",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "osaka",
+            "date": "2/13",
+            "events": [
+                {
+                    "name": "ホワイトハッカー",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "osaka",
+            "date": "2/14",
+            "events": [
+                {
+                    "name": "バイブコーディング",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "osaka",
+            "date": "2/14",
+            "events": [
+                {
+                    "name": "情報収集の自動化",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "osaka",
+            "date": "2/20",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "osaka",
+            "date": "2/21",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "osaka",
+            "date": "2/23",
+            "events": [
+                {
+                    "name": "ホワイトハッカー",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "osaka",
+            "date": "2/27",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "osaka",
+            "date": "2/28",
+            "events": [
+                {
+                    "name": "バイブコーディング",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "2/6",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "2/7",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "2/11",
+            "events": [
+                {
+                    "name": "メェーメェーランゲーム",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "2/13",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "2/13",
+            "events": [
+                {
+                    "name": "ホワイトハッカー",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "2/14",
+            "events": [
+                {
+                    "name": "バイブコーディング",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "2/14",
+            "events": [
+                {
+                    "name": "情報収集の自動化",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "2/20",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "2/21",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "2/23",
+            "events": [
+                {
+                    "name": "ホワイトハッカー",
+                    "type": "advanced"
+                },
+                {
+                    "name": "東京大学見学会",
+                    "type": "tour"
+                }
             ],
             "time": "13:00-16:00",
             "duration": "180分"
         },
         {
             "campus": "tokyo",
-            "date": "3/27",
-            "events": [{ "name": "情報収集の自動化", "type": "advanced" }],
-            "time": "14:00-16:00",
-            "duration": "120分"
+            "date": "2/27",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
         },
         {
             "campus": "tokyo",
-            "date": "3/28",
-            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
-            "time": "12:00-13:00",
-            "duration": "60分"
-        },
-
-        {
-            "campus": "yokohama",
-            "date": "3/6",
-            "events": [{ "name": "バイブコーディング", "type": "trial" }],
-            "time": "15:00-16:00",
+            "date": "2/28",
+            "events": [
+                {
+                    "name": "バイブコーディング",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
             "duration": "60分"
         },
         {
             "campus": "yokohama",
-            "date": "3/13",
-            "events": [{ "name": "シューティングゲーム", "type": "advanced" }],
+            "date": "2/6",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "yokohama",
+            "date": "2/7",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "yokohama",
+            "date": "2/11",
+            "events": [
+                {
+                    "name": "メェーメェーランゲーム",
+                    "type": "advanced"
+                }
+            ],
             "time": "14:00-16:00",
             "duration": "120分"
         },
         {
             "campus": "yokohama",
-            "date": "3/20",
-            "events": [{ "name": "バイブコーディング", "type": "trial" }],
-            "time": "15:00-16:00",
+            "date": "2/13",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
             "duration": "60分"
         },
         {
             "campus": "yokohama",
-            "date": "3/27",
-            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
-            "time": "15:00-16:00",
+            "date": "2/13",
+            "events": [
+                {
+                    "name": "ホワイトハッカー",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "yokohama",
+            "date": "2/14",
+            "events": [
+                {
+                    "name": "バイブコーディング",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
             "duration": "60分"
         },
-
         {
-            "campus": "okinawa",
-            "date": "3/6",
-            "events": [{ "name": "バイブコーディング", "type": "trial" }],
+            "campus": "yokohama",
+            "date": "2/14",
+            "events": [
+                {
+                    "name": "情報収集の自動化",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "yokohama",
+            "date": "2/20",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "yokohama",
+            "date": "2/21",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "yokohama",
+            "date": "2/23",
+            "events": [
+                {
+                    "name": "ホワイトハッカー",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "yokohama",
+            "date": "2/27",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "yokohama",
+            "date": "2/28",
+            "events": [
+                {
+                    "name": "バイブコーディング",
+                    "type": "trial"
+                }
+            ],
             "time": "11:00-12:00",
             "duration": "60分"
         },
         {
             "campus": "okinawa",
-            "date": "3/13",
-            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
+            "date": "2/6",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
             "time": "11:00-12:00",
             "duration": "60分"
         },
         {
             "campus": "okinawa",
-            "date": "3/20",
-            "events": [{ "name": "バイブコーディング", "type": "trial" }],
+            "date": "2/7",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
             "time": "11:00-12:00",
             "duration": "60分"
         },
         {
             "campus": "okinawa",
-            "date": "3/27",
-            "events": [{ "name": "オリジナルwebページ", "type": "trial" }],
+            "date": "2/11",
+            "events": [
+                {
+                    "name": "メェーメェーランゲーム",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "okinawa",
+            "date": "2/13",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "okinawa",
+            "date": "2/13",
+            "events": [
+                {
+                    "name": "ホワイトハッカー",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "okinawa",
+            "date": "2/14",
+            "events": [
+                {
+                    "name": "バイブコーディング",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "okinawa",
+            "date": "2/14",
+            "events": [
+                {
+                    "name": "情報収集の自動化",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "okinawa",
+            "date": "2/20",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "okinawa",
+            "date": "2/21",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "okinawa",
+            "date": "2/23",
+            "events": [
+                {
+                    "name": "ホワイトハッカー",
+                    "type": "advanced"
+                }
+            ],
+            "time": "14:00-16:00",
+            "duration": "120分"
+        },
+        {
+            "campus": "okinawa",
+            "date": "2/27",
+            "events": [
+                {
+                    "name": "Webページ開発体験",
+                    "type": "trial"
+                }
+            ],
+            "time": "11:00-12:00",
+            "duration": "60分"
+        },
+        {
+            "campus": "okinawa",
+            "date": "2/28",
+            "events": [
+                {
+                    "name": "バイブコーディング",
+                    "type": "trial"
+                }
+            ],
             "time": "11:00-12:00",
             "duration": "60分"
         }
