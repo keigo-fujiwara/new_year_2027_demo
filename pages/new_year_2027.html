@@ -37,7 +37,7 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="../css/new_year_2027.css?v=20261114053834" />
+        <link rel="stylesheet" href="../css/new_year_2027.css?v=20261114085912" />
         <title>
             本格的なプログラミングで春からスタートダッシュを！｜BeEngineer
         </title>
@@ -157,161 +157,171 @@
                         <h2 class="ribbon ribbon--white">
                             <span class="ribbon__text">無料体験講座</span>
                         </h2>
-                        <ul class="courses__list">
-                            <li class="course-card course-card--clickable">
-                                <button
-                                    class="course-card__button"
-                                    type="button"
-                                    data-course="vibe"
-                                    aria-haspopup="dialog"
+                        <!--
+                            PC：上段にホワイトハッカー、下段に他の4講座
+                            SP：上段に60分コース、下段に120分コース
+                        -->
+                        <div class="courses__group">
+                            <ul class="courses__list">
+                                <li class="course-card course-card--clickable">
+                                    <button
+                                        class="course-card__button"
+                                        type="button"
+                                        data-course="vibe"
+                                        aria-haspopup="dialog"
+                                    >
+                                        <img
+                                            class="course-card__img"
+                                            src="../assets/images/new_year_2027/png/vibe_coding_work.png"
+                                            alt="バイブコーディングで中学生が作ったゲームの紹介ページ"
+                                            loading="lazy"
+                                            decoding="async"
+                                        />
+                                        <span class="course-card__body">
+                                            <span class="course-card__title">
+                                                バイブ<br
+                                                    class="course-card__br"
+                                                />コーディング
+                                            </span>
+                                            <span class="course-card__meta">
+                                                <span
+                                                    class="course-card__time course-card__time--short"
+                                                    >60分</span
+                                                >コース
+                                            </span>
+                                        </span>
+                                    </button>
+                                </li>
+                                <li class="course-card course-card--clickable">
+                                    <button
+                                        class="course-card__button"
+                                        type="button"
+                                        data-course="web"
+                                        aria-haspopup="dialog"
+                                    >
+                                        <img
+                                            class="course-card__img"
+                                            src="../assets/images/new_year_2027/jpg/OriginalWebPage.jpg"
+                                            alt="Webページ制作の画面"
+                                            loading="lazy"
+                                            decoding="async"
+                                        />
+                                        <span class="course-card__body">
+                                            <span class="course-card__title">
+                                                Webページ<br
+                                                    class="course-card__br"
+                                                />開発体験
+                                            </span>
+                                            <span class="course-card__meta">
+                                                <span
+                                                    class="course-card__time course-card__time--short"
+                                                    >60分</span
+                                                >コース
+                                            </span>
+                                        </span>
+                                    </button>
+                                </li>
+                            </ul>
+                            <ul class="courses__list">
+                                <li class="course-card course-card--clickable">
+                                    <button
+                                        class="course-card__button"
+                                        type="button"
+                                        data-course="scraping"
+                                        aria-haspopup="dialog"
+                                    >
+                                        <img
+                                            class="course-card__img"
+                                            src="../assets/images/new_year_2027/jpg/Scraping.jpg"
+                                            alt="Pythonでの情報収集プログラム"
+                                            loading="lazy"
+                                            decoding="async"
+                                        />
+                                        <span class="course-card__body">
+                                            <span class="course-card__title">
+                                                Pythonで<br
+                                                    class="course-card__br"
+                                                />情報収集自動化
+                                            </span>
+                                            <span class="course-card__meta">
+                                                <span
+                                                    class="course-card__time course-card__time--long"
+                                                    >120分</span
+                                                >コース
+                                            </span>
+                                        </span>
+                                    </button>
+                                </li>
+                                <li class="course-card course-card--clickable">
+                                    <button
+                                        class="course-card__button"
+                                        type="button"
+                                        data-course="mee-mee-run"
+                                        aria-haspopup="dialog"
+                                    >
+                                        <img
+                                            class="course-card__img"
+                                            src="../assets/images/new_year_2027/jpg/mee_mee_run.jpg"
+                                            alt="メェーメェーランゲームのプレイ画面"
+                                            loading="lazy"
+                                            decoding="async"
+                                        />
+                                        <span class="course-card__body">
+                                            <span class="course-card__title">
+                                                メェーメェー<br
+                                                    class="course-card__br"
+                                                />ランゲーム
+                                            </span>
+                                            <span class="course-card__meta">
+                                                <span
+                                                    class="course-card__time course-card__time--long"
+                                                    >120分</span
+                                                >コース
+                                            </span>
+                                        </span>
+                                    </button>
+                                </li>
+                                <li
+                                    class="course-card course-card--clickable course-card--featured"
                                 >
-                                    <img
-                                        class="course-card__img"
-                                        src="../assets/images/new_year_2027/png/vibe_coding_work.png"
-                                        alt="バイブコーディングで中学生が作ったゲームの紹介ページ"
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                    <span class="course-card__body">
-                                        <span class="course-card__title">
-                                            バイブ<br
-                                                class="course-card__br"
-                                            />コーディング
+                                    <button
+                                        class="course-card__button"
+                                        type="button"
+                                        data-course="white-hacker"
+                                        aria-haspopup="dialog"
+                                    >
+                                        <!-- 横長のサムネイルなので切り抜かず全体を収める（余白は画像の地色） -->
+                                        <img
+                                            class="course-card__img course-card__img--contain"
+                                            style="
+                                                --img-bg: #aca4ff;
+                                                --img-pad: 0;
+                                            "
+                                            src="../assets/images/new_year_2027/png/white_hacker.png"
+                                            alt="White Hacker"
+                                            loading="lazy"
+                                            decoding="async"
+                                        />
+                                        <span class="course-card__body">
+                                            <span class="course-card__title">
+                                                ホワイト<br
+                                                    class="course-card__br"
+                                                />ハッカー
+                                            </span>
+                                            <span class="course-card__meta">
+                                                <span
+                                                    class="course-card__time course-card__time--long"
+                                                    >120分</span
+                                                >コース
+                                            </span>
                                         </span>
-                                        <span class="course-card__meta">
-                                            <span
-                                                class="course-card__time course-card__time--short"
-                                                >60分</span
-                                            >コース
-                                        </span>
-                                    </span>
-                                </button>
-                            </li>
-                            <li class="course-card course-card--clickable">
-                                <button
-                                    class="course-card__button"
-                                    type="button"
-                                    data-course="web"
-                                    aria-haspopup="dialog"
-                                >
-                                    <img
-                                        class="course-card__img"
-                                        src="../assets/images/new_year_2027/jpg/OriginalWebPage.jpg"
-                                        alt="Webページ制作の画面"
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                    <span class="course-card__body">
-                                        <span class="course-card__title">
-                                            Webページ<br
-                                                class="course-card__br"
-                                            />開発体験
-                                        </span>
-                                        <span class="course-card__meta">
-                                            <span
-                                                class="course-card__time course-card__time--short"
-                                                >60分</span
-                                            >コース
-                                        </span>
-                                    </span>
-                                </button>
-                            </li>
-                        </ul>
-                        <!-- 上段：60分コース / 下段：120分コース -->
-                        <ul class="courses__list">
-                            <li class="course-card course-card--clickable">
-                                <button
-                                    class="course-card__button"
-                                    type="button"
-                                    data-course="scraping"
-                                    aria-haspopup="dialog"
-                                >
-                                    <img
-                                        class="course-card__img"
-                                        src="../assets/images/new_year_2027/jpg/Scraping.jpg"
-                                        alt="Pythonでの情報収集プログラム"
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                    <span class="course-card__body">
-                                        <span class="course-card__title">
-                                            Pythonで<br
-                                                class="course-card__br"
-                                            />情報収集自動化
-                                        </span>
-                                        <span class="course-card__meta">
-                                            <span
-                                                class="course-card__time course-card__time--long"
-                                                >120分</span
-                                            >コース
-                                        </span>
-                                    </span>
-                                </button>
-                            </li>
-                            <li class="course-card course-card--clickable">
-                                <button
-                                    class="course-card__button"
-                                    type="button"
-                                    data-course="mee-mee-run"
-                                    aria-haspopup="dialog"
-                                >
-                                    <img
-                                        class="course-card__img"
-                                        src="../assets/images/new_year_2027/jpg/mee_mee_run.jpg"
-                                        alt="メェーメェーランゲームのプレイ画面"
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                    <span class="course-card__body">
-                                        <span class="course-card__title">
-                                            メェーメェー<br
-                                                class="course-card__br"
-                                            />ランゲーム
-                                        </span>
-                                        <span class="course-card__meta">
-                                            <span
-                                                class="course-card__time course-card__time--long"
-                                                >120分</span
-                                            >コース
-                                        </span>
-                                    </span>
-                                </button>
-                            </li>
-                            <li class="course-card course-card--clickable">
-                                <button
-                                    class="course-card__button"
-                                    type="button"
-                                    data-course="white-hacker"
-                                    aria-haspopup="dialog"
-                                >
-                                    <!-- 横長のサムネイルなので切り抜かず全体を収める（余白は画像の地色） -->
-                                    <img
-                                        class="course-card__img course-card__img--contain"
-                                        style="--img-bg: #aca4ff; --img-pad: 0"
-                                        src="../assets/images/new_year_2027/png/white_hacker.png"
-                                        alt="White Hacker"
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                    <span class="course-card__body">
-                                        <span class="course-card__title">
-                                            ホワイト<br
-                                                class="course-card__br"
-                                            />ハッカー
-                                        </span>
-                                        <span class="course-card__meta">
-                                            <span
-                                                class="course-card__time course-card__time--long"
-                                                >120分</span
-                                            >コース
-                                        </span>
-                                    </span>
-                                </button>
-                            </li>
-                        </ul>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
 
                         <h2 class="ribbon ribbon--teal">
-                            <span class="ribbon__text">無料イベント講座</span>
+                            <span class="ribbon__text">無料イベント</span>
                         </h2>
                         <ul class="courses__list">
                             <li
@@ -537,10 +547,7 @@
                                 ><br class="value__br-sp" /><span
                                     class="value__chunk"
                                     >実際のプログラミング言語を使い</span
-                                ><span
-                                    class="value__chunk"
-                                    >学びます。</span
-                                >
+                                ><span class="value__chunk">学びます。</span>
                             </h2>
                             <img
                                 class="value__lang-logo value__lang-logo--dart"
@@ -1078,6 +1085,6 @@
             />
             <span class="line-follow__text">LINEで<br />申し込む</span>
         </a>
-        <script type="module" src="../src/new_year_2027/main.js?v=20261114053834" defer></script>
+        <script type="module" src="../src/new_year_2027/main.js?v=20261114085912" defer></script>
     </body>
 </html>

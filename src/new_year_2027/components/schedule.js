@@ -6,7 +6,7 @@
  * - #schedule-<校舎キー> へのリンクで該当タブを開いてスクロール（FVのエリアリンク用）
  * - 校舎カードの「Googleマップで確認する」で地図を開閉
  */
-import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261114053834';
+import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261114085912';
 
 const HASH_PREFIX = '#schedule-';
 
@@ -62,21 +62,18 @@ function renderRows(items, data) {
         .join('');
 }
 
-/** 色の凡例（その校舎の日程に出てくる種類だけ） */
-function renderLegend(items, data) {
-    const types = new Set(
-        items.flatMap((item) => item.events.map((ev) => ev.type))
-    );
-    const labels = Object.entries(data.eventTypes || {}).filter(([type]) =>
-        types.has(type)
-    );
-    if (!labels.length) return '';
-    return `<ul class="schedule__legend">${labels
-        .map(
-            ([type, label]) =>
-                `<li class="schedule__legend-item schedule__legend-item--${escapeHtml(type)}">${escapeHtml(label)}</li>`
-        )
-        .join('')}</ul>`;
+/**
+ * 講座名ラベルの幅（em）。一番長い講座名に全ラベルの幅を揃えるため、
+ * 文字数から幅を見積もる（全角1em・半角0.6em + 字間0.04em/字）
+ */
+function badgeWidthEm(items) {
+    const names = items.flatMap((item) => item.events.map((ev) => ev.name));
+    const width = (name) =>
+        [...name].reduce(
+            (sum, ch) => sum + (/[\x20-\x7e]/.test(ch) ? 0.6 : 1) + 0.04,
+            0
+        );
+    return Math.ceil(Math.max(0, ...names.map(width)) * 10) / 10;
 }
 
 function renderCampusCard(campus) {
@@ -105,7 +102,6 @@ function renderPanel(campus, items, data, isActive) {
     return `
         <div class="schedule__panel" id="schedule-${campus.key}" role="tabpanel" aria-labelledby="schedule-tab-${campus.key}" ${isActive ? '' : 'hidden'}>
             <div class="schedule__main">
-                ${renderLegend(items, data)}
                 <ul class="schedule__list">${rows || '<li class="schedule__empty">日程は近日公開予定です</li>'}</ul>
                 <a class="schedule__apply" data-custom-link data-path="/lp/trial-lesson" data-has-refer href="#" target="apply_form">この校舎の無料講座に申し込む</a>
             </div>
@@ -222,6 +218,10 @@ export default async function initSchedule(selector = '#schedule') {
             )
             .join('');
 
+        root.style.setProperty(
+            '--schedule-badge-w',
+            `${badgeWidthEm(data.items)}em`
+        );
         root.querySelector('.schedule__tabs').innerHTML = tabsHtml;
         root.querySelector('.schedule__panels').innerHTML = panelsHtml;
         bindEvents(root);

@@ -47,6 +47,7 @@
                 "PythonはWebからデータ収集（スクレイピング）することもできます。",
                 "Pythonで情報収集を自動化させれば、人間が手作業で行えば数日かかるような作業を、プログラムなら数分、あるいは数秒で終わらせる技術を得られます。"
             ],
+            "worksTitle": "講座のイメージ",
             "works": [
                 {
                     "src": "../assets/images/new_year_2027/jpg/work_scraping.jpg",
@@ -66,6 +67,7 @@
                 "このゲーム作りでは、HTML・CSSで見た目を整え、JavaScriptでゲーム要素を追加していきます。",
                 "移動やジャンプなど画面上での動きの仕組みを理解しながら、実際にコードを書いて完成させていきます。"
             ],
+            "worksTitle": "講座のイメージ",
             "works": [
                 {
                     "src": "../assets/images/new_year_2027/jpg/mee_mee_run.jpg",

@@ -5,15 +5,18 @@
  *   （courses.json の scheduleEvents と schedule.json の events[].name を突き合わせる）
  * - ×ボタン / 背景クリック / Escキーで閉じる
  */
-import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261114053834';
+import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261114085912';
 
-const COURSES_URL = '../src/new_year_2027/data/courses.json?v=20261114053834';
+const COURSES_URL = '../src/new_year_2027/data/courses.json?v=20261114085912';
 
-/** "2/23" → "2月23日(火・祝)" */
-function formatDate(md, data) {
+/**
+ * "2/23" → 「2月」「23日」「(火祝)」
+ * 月・日・曜日を別の枠に入れ、行・校舎をまたいで縦位置を揃える
+ */
+function renderDate(md, data) {
     const [m, d] = md.split('/');
     const dow = getDow(data.year, md, data.holidays || []);
-    return `${Number(m)}月${Number(d)}日(${dow.label})`;
+    return `<span class="course-modal__month">${Number(m)}月</span><span class="course-modal__day">${Number(d)}日</span><span class="course-modal__dow">(${dow.label})</span>`;
 }
 
 /** "14:00-16:00" → "14:00 - 16:00" */
@@ -43,7 +46,7 @@ function renderSchedule(course, data) {
             const rows = items
                 .map(
                     (item) =>
-                        `<li><span class="course-modal__date">${formatDate(item.date, data)}</span><span>${escapeHtml(formatTime(item.time))}</span></li>`
+                        `<li>${renderDate(item.date, data)}<span class="course-modal__time">${escapeHtml(formatTime(item.time))}</span></li>`
                 )
                 .join('');
             return `

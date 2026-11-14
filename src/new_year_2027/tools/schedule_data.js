@@ -2,7 +2,7 @@
  * 日程データ（data/schedule.json）の読み込みと共通処理
  * 校舎・日時セクションと講座モーダルで共有する
  */
-const SCHEDULE_URL = '../src/new_year_2027/data/schedule.json?v=20261114053834';
+const SCHEDULE_URL = '../src/new_year_2027/data/schedule.json?v=20261114085912';
 const DOW = ['日', '月', '火', '水', '木', '金', '土'];
 
 let schedulePromise = null;
@@ -24,12 +24,12 @@ export function loadSchedule() {
     return schedulePromise;
 }
 
-/** "3/20" → { label: "金", modifier: "sat" | "sun" | "" }（祝日は "月・祝" / sun） */
+/** "3/20" → { label: "金", modifier: "sat" | "sun" | "" }（祝日は "月祝" / sun） */
 export function getDow(year, md, holidays = []) {
     const [m, d] = md.split('/').map(Number);
     const day = new Date(year, m - 1, d).getDay();
     const isHoliday = holidays.includes(md);
-    const label = isHoliday && day !== 0 ? `${DOW[day]}・祝` : DOW[day];
+    const label = isHoliday && day !== 0 ? `${DOW[day]}祝` : DOW[day];
     let modifier = '';
     if (day === 0 || isHoliday) modifier = 'sun';
     else if (day === 6) modifier = 'sat';
