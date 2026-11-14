@@ -89,7 +89,28 @@ fs.writeFileSync(
         .readFileSync(linkPath, 'utf8')
         .replace("from '../../../env.js'", "from '../../env.js'")
 );
-console.log('HTML/JS を確認用に加工しました');
+
+// キャッシュ対策：GitHub Pages は配信サーバー側で最大10分キャッシュするため、
+// 反映のたびに CSS / JS / JSON の URL に ?v=<反映日時> を付けて必ず最新を読ませる
+const VERSION = new Date()
+    .toISOString()
+    .replace(/[-:T]/g, '')
+    .slice(0, 14);
+const addVersion = (text) =>
+    text.replace(
+        /((?:\.\.?\/)[^'"`\s?]+\.(?:css|js|json))(['"`])/g,
+        `$1?v=${VERSION}$2`
+    );
+fs.writeFileSync(pagePath, addVersion(fs.readFileSync(pagePath, 'utf8')));
+const walkJs = (dir) =>
+    fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
+        const p = path.join(dir, e.name);
+        return e.isDirectory() ? walkJs(p) : p.endsWith('.js') ? [p] : [];
+    });
+for (const file of walkJs(path.join(HERE, 'src'))) {
+    fs.writeFileSync(file, addVersion(fs.readFileSync(file, 'utf8')));
+}
+console.log(`HTML/JS を確認用に加工しました（キャッシュ対策 v=${VERSION}）`);
 
 // ---------- 4. 確認用ファイル ----------
 // 本番の env.js は使わない（申込リンクは確認環境では遷移先なし）
