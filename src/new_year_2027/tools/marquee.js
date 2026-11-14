@@ -37,6 +37,10 @@ function cloneForFill(item) {
         img.alt = '';
         img.removeAttribute('loading');
     });
+    // ボタン・リンクはTabキーで止まらないようにする（クリックは有効のまま）
+    clone.querySelectorAll('button, a').forEach((el) => {
+        el.tabIndex = -1;
+    });
     return clone;
 }
 
