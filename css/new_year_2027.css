@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -939,6 +940,11 @@ li:last-child .fv__area {
     margin: 28px 0 44px;
   }
 }
+@media (min-width: 768px) {
+  .courses__list--event {
+    grid-template-columns: repeat(auto-fit, minmax(0, 448px));
+  }
+}
 
 .course-card {
   background: #fff;
@@ -950,13 +956,8 @@ li:last-child .fv__area {
 .course-card--event {
   border: 4px solid #8ddcd6;
 }
-@media (min-width: 768px) {
-  .course-card--featured {
-    grid-column: 1/-1;
-    justify-self: center;
-    order: -1;
-    width: 212px;
-  }
+.course-card__label, .course-card__lead, .course-card__more {
+  display: none;
 }
 .course-card--clickable {
   transition: transform 0.2s, box-shadow 0.2s;
@@ -1050,6 +1051,94 @@ li:last-child .fv__area {
   }
 }
 
+@media (min-width: 768px) {
+  .course-card--featured .course-card__button,
+  .course-card--event .course-card__button {
+    align-items: center;
+    display: grid;
+    height: 100%;
+  }
+  .course-card--featured {
+    border: 0;
+    box-shadow: 0 4px 18px rgba(31, 79, 224, 0.18);
+    grid-column: 1/-1;
+    order: -1;
+    outline: 4px solid #aca4ff;
+    outline-offset: -4px;
+  }
+  .course-card--featured .course-card__button {
+    align-items: stretch;
+    gap: 32px;
+    grid-template-columns: minmax(0, 54%) minmax(0, 1fr);
+  }
+  .course-card--featured .course-card__img {
+    aspect-ratio: 16/9;
+    height: 100%;
+  }
+  .course-card--featured .course-card__body {
+    align-self: center;
+  }
+  .course-card--featured .course-card__body {
+    padding: 20px 32px 20px 0;
+  }
+  .course-card--featured .course-card__label {
+    background: #1f4fe0;
+    border-radius: 999px;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    padding: 7px 16px;
+  }
+  .course-card--featured .course-card__title {
+    font-size: 28px;
+    letter-spacing: 0.06em;
+    margin-top: 12px;
+    padding: 0 0 10px;
+  }
+  .course-card--featured .course-card__meta {
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  .course-card--featured .course-card__lead {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 1.8;
+    margin-top: 12px;
+  }
+  .course-card--featured .course-card__more {
+    color: #1f4fe0;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 16px;
+  }
+  .course-card--featured .course-card__more::after {
+    content: " →";
+  }
+  .course-card--event .course-card__button {
+    gap: 20px;
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
+  .course-card--event .course-card__img {
+    aspect-ratio: 4/3;
+  }
+  .course-card--event .course-card__body {
+    padding: 0 16px 0 0;
+  }
+  .course-card--event .course-card__title {
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    padding-bottom: 8px;
+  }
+  .course-card--event .course-card__meta {
+    font-size: 14px;
+    padding-top: 8px;
+  }
+}
 html.is-modal-open {
   overflow: hidden;
 }
@@ -2118,37 +2207,30 @@ html.is-modal-open {
     gap: 20px;
   }
   .value__lang {
-    display: block;
-    margin-top: 48px;
-    padding: 14px 0;
-    position: relative;
-  }
-  .value__lang-logo {
-    opacity: 0.22;
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    align-items: center;
+    display: grid;
+    gap: 8px 10px;
+    grid-template-areas: ". python dart" "text text text";
+    grid-template-columns: 1fr auto auto;
+    margin: 48px auto 0;
+    width: fit-content;
   }
   .value__lang-logo--python {
-    left: 0;
-    width: 58px;
+    grid-area: python;
+    width: 40px;
   }
   .value__lang-logo--dart {
-    right: 0;
-    width: 92px;
+    grid-area: dart;
+    width: 72px;
   }
   .value__lang-text {
     font-size: clamp(12px, 3.9vw, 15px);
     font-weight: 500;
     letter-spacing: 0.02em;
     line-height: 1.7;
-    margin: 0 auto;
-    position: relative;
+    grid-area: text;
     text-align: left;
     white-space: nowrap;
-    width: fit-content;
-    z-index: 1;
   }
   .value__chunk {
     display: inline;

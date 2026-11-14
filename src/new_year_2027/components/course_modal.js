@@ -5,9 +5,9 @@
  *   （courses.json の scheduleEvents と schedule.json の events[].name を突き合わせる）
  * - ×ボタン / 背景クリック / Escキーで閉じる
  */
-import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261114101143';
+import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261114102347';
 
-const COURSES_URL = '../src/new_year_2027/data/courses.json?v=20261114101143';
+const COURSES_URL = '../src/new_year_2027/data/courses.json?v=20261114102347';
 
 /**
  * "2/23" → 「2月」「23日」「(火祝)」

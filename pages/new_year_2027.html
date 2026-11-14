@@ -37,7 +37,7 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="../css/new_year_2027.css?v=20261114101143" />
+        <link rel="stylesheet" href="../css/new_year_2027.css?v=20261114102347" />
         <title>
             本格的なプログラミングで春からスタートダッシュを！｜BeEngineer
         </title>
@@ -303,6 +303,10 @@
                                             decoding="async"
                                         />
                                         <span class="course-card__body">
+                                            <!-- 注目ラベル・紹介文・詳細リンクはPCのみ表示 -->
+                                            <span class="course-card__label"
+                                                >注目講座</span
+                                            >
                                             <span class="course-card__title">
                                                 ホワイト<br
                                                     class="course-card__br"
@@ -314,6 +318,12 @@
                                                     >120分</span
                                                 >コース
                                             </span>
+                                            <span class="course-card__lead">
+                                                脆弱なサイトへの攻撃を防ぐ体験を通して、ネットワークとセキュリティ対策の基礎を学びます。
+                                            </span>
+                                            <span class="course-card__more"
+                                                >講座の詳細を見る</span
+                                            >
                                         </span>
                                     </button>
                                 </li>
@@ -323,7 +333,7 @@
                         <h2 class="ribbon ribbon--teal">
                             <span class="ribbon__text">無料イベント</span>
                         </h2>
-                        <ul class="courses__list">
+                        <ul class="courses__list courses__list--event">
                             <li
                                 class="course-card course-card--event course-card--clickable"
                             >
@@ -403,11 +413,11 @@
                 <section
                     id="flow"
                     class="flow"
-                    aria-label="体験・イベント参加までの流れ"
+                    aria-label="体験講座・イベント参加までの流れ"
                 >
                     <div class="flow__inner">
                         <h2 class="flow__heading">
-                            体験・イベント参加までの流れ
+                            体験講座・イベント参加までの流れ
                         </h2>
                         <ol class="flow__list">
                             <li class="flow__step">
@@ -457,7 +467,9 @@
                                     alt=""
                                     decoding="async"
                                 />
-                                <h3 class="flow__title">体験会参加</h3>
+                                <h3 class="flow__title">
+                                    体験講座・イベント講座に参加
+                                </h3>
                                 <p class="flow__text">
                                     手ぶらで参加OKです！プログラミング体験を楽しんでください。
                                 </p>
@@ -1085,6 +1097,6 @@
             />
             <span class="line-follow__text">LINEで<br />申し込む</span>
         </a>
-        <script type="module" src="../src/new_year_2027/main.js?v=20261114101143" defer></script>
+        <script type="module" src="../src/new_year_2027/main.js?v=20261114102347" defer></script>
     </body>
 </html>

@@ -1,8 +1,8 @@
-import CustomLinkHandler from '../common/custom_link.js?v=20261114101143';
-import initLineFollow from './components/line_follow.js?v=20261114101143';
-import initSchedule from './components/schedule.js?v=20261114101143';
-import initCourseModal from './components/course_modal.js?v=20261114101143';
-import initMarquee from './tools/marquee.js?v=20261114101143';
+import CustomLinkHandler from '../common/custom_link.js?v=20261114102347';
+import initLineFollow from './components/line_follow.js?v=20261114102347';
+import initSchedule from './components/schedule.js?v=20261114102347';
+import initCourseModal from './components/course_modal.js?v=20261114102347';
+import initMarquee from './tools/marquee.js?v=20261114102347';
 
 document.addEventListener('DOMContentLoaded', async () => {
     // 追従LINEボタン
