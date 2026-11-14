@@ -2,7 +2,7 @@
  * 日程データ（data/schedule.json）の読み込みと共通処理
  * 校舎・日時セクションと講座モーダルで共有する
  */
-const SCHEDULE_URL = '../src/new_year_2027/data/schedule.json?v=20261114050935';
+const SCHEDULE_URL = '../src/new_year_2027/data/schedule.json?v=20261114053834';
 const DOW = ['日', '月', '火', '水', '木', '金', '土'];
 
 let schedulePromise = null;

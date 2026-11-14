@@ -6,29 +6,77 @@
  * - #schedule-<校舎キー> へのリンクで該当タブを開いてスクロール（FVのエリアリンク用）
  * - 校舎カードの「Googleマップで確認する」で地図を開閉
  */
-import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261114050935';
+import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261114053834';
 
 const HASH_PREFIX = '#schedule-';
 
-function renderRow(item, data) {
-    const dow = getDow(data.year, item.date, data.holidays || []);
-    const badges = item.events
-        .map(
-            (ev) =>
-                `<span class="schedule__badge schedule__badge--${escapeHtml(ev.type)}">${escapeHtml(ev.name)}</span>`
-        )
+/** "2/13" → [2, 13] */
+const splitMd = (md) => md.split('/').map(Number);
+
+/** 日付 → 時間の順に並べる */
+const byDateTime = (a, b) => {
+    const [am, ad] = splitMd(a.date);
+    const [bm, bd] = splitMd(b.date);
+    return am - bm || ad - bd || a.time.localeCompare(b.time);
+};
+
+/**
+ * 1日1行。同じ日の講座は行の中に時間順で並べる
+ * 月・日・曜日・時間はそれぞれ幅を固定した枠に入れ、行をまたいで縦位置を揃える
+ */
+function renderDay(date, items, data) {
+    const [m, d] = splitMd(date);
+    const dow = getDow(data.year, date, data.holidays || []);
+    const sessions = items
+        .map((item) => {
+            const badges = item.events
+                .map(
+                    (ev) =>
+                        `<span class="schedule__badge schedule__badge--${escapeHtml(ev.type)}">${escapeHtml(ev.name)}</span>`
+                )
+                .join('');
+            return `
+                <li class="schedule__session">
+                    <span class="schedule__time">${escapeHtml(item.time.replace(/\s*-\s*/, '-'))}</span>
+                    <span class="schedule__badges">${badges}</span>
+                </li>`;
+        })
         .join('');
     return `
         <li class="schedule__row">
             <p class="schedule__date">
-                ${escapeHtml(item.date)}<span class="schedule__dow${dow.modifier ? ` schedule__dow--${dow.modifier}` : ''}">${dow.label}</span>
+                <span class="schedule__month">${m}</span><span class="schedule__slash">/</span><span class="schedule__day">${d}</span><span class="schedule__dow${dow.modifier ? ` schedule__dow--${dow.modifier}` : ''}">${dow.label}</span>
             </p>
-            <div class="schedule__events">
-                <div class="schedule__badges">${badges}</div>
-                <p class="schedule__time">${escapeHtml(item.time)}</p>
-            </div>
-            <p class="schedule__duration">${escapeHtml(item.duration)}</p>
+            <ul class="schedule__sessions">${sessions}</ul>
         </li>`;
+}
+
+function renderRows(items, data) {
+    const days = new Map();
+    [...items].sort(byDateTime).forEach((item) => {
+        if (!days.has(item.date)) days.set(item.date, []);
+        days.get(item.date).push(item);
+    });
+    return [...days]
+        .map(([date, dayItems]) => renderDay(date, dayItems, data))
+        .join('');
+}
+
+/** 色の凡例（その校舎の日程に出てくる種類だけ） */
+function renderLegend(items, data) {
+    const types = new Set(
+        items.flatMap((item) => item.events.map((ev) => ev.type))
+    );
+    const labels = Object.entries(data.eventTypes || {}).filter(([type]) =>
+        types.has(type)
+    );
+    if (!labels.length) return '';
+    return `<ul class="schedule__legend">${labels
+        .map(
+            ([type, label]) =>
+                `<li class="schedule__legend-item schedule__legend-item--${escapeHtml(type)}">${escapeHtml(label)}</li>`
+        )
+        .join('')}</ul>`;
 }
 
 function renderCampusCard(campus) {
@@ -53,10 +101,11 @@ function renderCampusCard(campus) {
 }
 
 function renderPanel(campus, items, data, isActive) {
-    const rows = items.map((item) => renderRow(item, data)).join('');
+    const rows = renderRows(items, data);
     return `
         <div class="schedule__panel" id="schedule-${campus.key}" role="tabpanel" aria-labelledby="schedule-tab-${campus.key}" ${isActive ? '' : 'hidden'}>
             <div class="schedule__main">
+                ${renderLegend(items, data)}
                 <ul class="schedule__list">${rows || '<li class="schedule__empty">日程は近日公開予定です</li>'}</ul>
                 <a class="schedule__apply" data-custom-link data-path="/lp/trial-lesson" data-has-refer href="#" target="apply_form">この校舎の無料講座に申し込む</a>
             </div>
