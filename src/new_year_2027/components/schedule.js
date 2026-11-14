@@ -6,7 +6,7 @@
  * - #schedule-<校舎キー> へのリンクで該当タブを開いてスクロール（FVのエリアリンク用）
  * - 校舎カードの「Googleマップで確認する」で地図を開閉
  */
-import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261114085912';
+import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261114101143';
 
 const HASH_PREFIX = '#schedule-';
 
@@ -76,8 +76,14 @@ function badgeWidthEm(items) {
     return Math.ceil(Math.max(0, ...names.map(width)) * 10) / 10;
 }
 
-function renderCampusCard(campus) {
+/**
+ * 校舎カード
+ * mapOpen = true（PC）のときは地図を開いた状態で描画する。
+ * 閉じているタブの地図は loading="lazy" により、タブを開くまで読み込まれない
+ */
+function renderCampusCard(campus, mapOpen) {
     const mapId = `schedule-map-${campus.key}`;
+    const mapSrc = escapeHtml(campus.mapSrc);
     return `
         <div class="schedule__campus">
             <img class="schedule__campus-photo" src="${escapeHtml(campus.photo)}" alt="${escapeHtml(campus.name)}の外観" loading="lazy" decoding="async" />
@@ -87,17 +93,17 @@ function renderCampusCard(campus) {
                     ${escapeHtml(campus.zip)}<br />${campus.address.map(escapeHtml).join('<br />')}
                 </p>
                 <p class="schedule__campus-access">${campus.access.map(escapeHtml).join('<br />')}</p>
-                <button class="schedule__map-toggle" type="button" aria-expanded="false" aria-controls="${mapId}">
+                <button class="schedule__map-toggle" type="button" aria-expanded="${mapOpen}" aria-controls="${mapId}">
                     Googleマップで確認する
                 </button>
-                <div class="schedule__map" id="${mapId}" hidden>
-                    <iframe data-src="${escapeHtml(campus.mapSrc)}" title="${escapeHtml(campus.name)}の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                <div class="schedule__map" id="${mapId}"${mapOpen ? '' : ' hidden'}>
+                    <iframe ${mapOpen ? 'src' : 'data-src'}="${mapSrc}" title="${escapeHtml(campus.name)}の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
                 </div>
             </div>
         </div>`;
 }
 
-function renderPanel(campus, items, data, isActive) {
+function renderPanel(campus, items, data, isActive, mapOpen) {
     const rows = renderRows(items, data);
     return `
         <div class="schedule__panel" id="schedule-${campus.key}" role="tabpanel" aria-labelledby="schedule-tab-${campus.key}" ${isActive ? '' : 'hidden'}>
@@ -105,7 +111,7 @@ function renderPanel(campus, items, data, isActive) {
                 <ul class="schedule__list">${rows || '<li class="schedule__empty">日程は近日公開予定です</li>'}</ul>
                 <a class="schedule__apply" data-custom-link data-path="/lp/trial-lesson" data-has-refer href="#" target="apply_form">この校舎の無料講座に申し込む</a>
             </div>
-            ${renderCampusCard(campus)}
+            ${renderCampusCard(campus, mapOpen)}
         </div>`;
 }
 
@@ -207,13 +213,16 @@ export default async function initSchedule(selector = '#schedule') {
         const tabsHtml = data.campuses
             .map((c, i) => renderTab(c, i === 0))
             .join('');
+        // PCは地図を開いた状態で表示（SPは「Googleマップで確認する」で開く）
+        const mapOpen = window.matchMedia('(min-width: 768px)').matches;
         const panelsHtml = data.campuses
             .map((c, i) =>
                 renderPanel(
                     c,
                     data.items.filter((item) => item.campus === c.key),
                     data,
-                    i === 0
+                    i === 0,
+                    mapOpen
                 )
             )
             .join('');
