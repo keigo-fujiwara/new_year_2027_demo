@@ -37,7 +37,7 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="../css/new_year_2027.css?v=20261114104220" />
+        <link rel="stylesheet" href="../css/new_year_2027.css?v=20261115021000" />
         <title>
             本格的なプログラミングで春からスタートダッシュを！｜BeEngineer
         </title>
@@ -51,6 +51,11 @@
     <body>
         <div class="wrapper">
             <main>
+                <!--
+                    FVのデザイン比較（デザイン確定後、採用しないパターンは削除する）
+                    - 通常：従来のデザイン
+                    - URL に ?fv=1 ：パターン1（fv--hero：動画を全面に敷きグラデーションを重ねる。fv_hero.js / firstview_hero.scss）
+                -->
                 <section
                     id="firstview"
                     class="fv"
@@ -74,7 +79,15 @@
                         </video>
                         <h1 class="fv__logo">
                             <img
+                                class="fv__logo-img fv__logo-img--color"
                                 src="../assets/images/new_year_2027/svg/logo_color.svg"
+                                alt="BeEngineer"
+                                decoding="async"
+                            />
+                            <!-- 新デザイン（動画の上）用の白ロゴ -->
+                            <img
+                                class="fv__logo-img fv__logo-img--white"
+                                src="../assets/images/new_year_2027/svg/logo_white.svg"
                                 alt="BeEngineer"
                                 decoding="async"
                             />
@@ -91,10 +104,17 @@
                             </p>
                         </div>
 
+                        <!-- 新デザインのみ表示：コード風の小見出し -->
+                        <p class="fv__eyebrow" aria-hidden="true">
+                            <span class="fv__eyebrow-mark">//</span> 2027
+                            SPRING&nbsp;&nbsp;FREE TRIAL &amp; EVENT
+                        </p>
+
+                        <!-- 新デザインでは1文字ずつ打ち込むように表示（fv_hero.js） -->
                         <p class="fv__catch">
                             <span class="fv__catch-line"
                                 >本格的なプログラミングで</span
-                            ><span class="fv__catch-line"
+                            ><span class="fv__catch-line fv__catch-line--accent"
                                 >春からスタートダッシュを！</span
                             >
                         </p>
@@ -1313,6 +1333,6 @@
             />
             <span class="line-follow__text">LINEで<br />申し込む</span>
         </a>
-        <script type="module" src="../src/new_year_2027/main.js?v=20261114104220" defer></script>
+        <script type="module" src="../src/new_year_2027/main.js?v=20261115021000" defer></script>
     </body>
 </html>

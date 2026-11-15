@@ -651,6 +651,12 @@ template {
   height: auto;
   width: 100%;
 }
+.fv__logo img.fv__logo-img--white {
+  display: none;
+}
+.fv__eyebrow {
+  display: none;
+}
 .fv__panel {
   background: #1e6400;
   color: #fff;
@@ -876,6 +882,267 @@ li:last-child .fv__area {
   }
   .fv__btn--mail {
     order: -1;
+  }
+}
+.fv.fv--hero {
+  background: #06301a;
+  border-bottom: 0;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.fv.fv--hero .fv__media {
+  inset: 0;
+  position: absolute;
+}
+.fv.fv--hero .fv__media::before {
+  background: linear-gradient(180deg, rgba(6, 48, 26, 0) 70%, rgba(15, 110, 100, 0.55) 92%, rgba(171, 233, 216, 0.9) 100%), linear-gradient(100deg, rgba(6, 48, 26, 0.94) 0%, rgba(6, 48, 26, 0.82) 30%, rgba(15, 110, 100, 0.45) 58%, rgba(15, 110, 100, 0) 82%);
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: 1;
+}
+.fv.fv--hero .fv__media::after {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  content: "";
+  inset: 0;
+  mask-image: linear-gradient(100deg, #000 0%, #000 35%, transparent 70%);
+  position: absolute;
+  z-index: 1;
+}
+.fv.fv--hero .fv__logo {
+  z-index: 2;
+}
+.fv.fv--hero .fv__logo-img--color {
+  display: none;
+}
+.fv.fv--hero .fv__logo-img--white {
+  display: block;
+}
+.fv.fv--hero .fv__panel {
+  background: none;
+  position: relative;
+  z-index: 2;
+}
+.fv.fv--hero .fv__labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  height: auto;
+  inset: auto;
+  padding: 0;
+  position: static;
+}
+.fv.fv--hero .fv__label {
+  left: auto;
+  position: static;
+  top: auto;
+}
+.fv.fv--hero .fv__label--main {
+  transform: rotate(-4deg);
+}
+.fv.fv--hero .fv__label--sub {
+  align-self: center;
+  transform: rotate(3deg);
+}
+.fv.fv--hero .fv__eyebrow {
+  color: #8ff0c8;
+  display: block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+}
+.fv.fv--hero .fv__eyebrow-mark {
+  color: rgba(143, 240, 200, 0.55);
+}
+.fv.fv--hero .fv__catch {
+  color: #fff;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+  padding: 0;
+  text-align: left;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+.fv.fv--hero .fv__catch-line--accent {
+  background: linear-gradient(90deg, #8ff0c8 0%, #c8edc0 50%, #f8eb98 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+.fv.fv--hero .fv__char.is-hidden {
+  visibility: hidden;
+}
+.fv.fv--hero .fv__cursor {
+  display: inline-block;
+  position: relative;
+  width: 0;
+}
+.fv.fv--hero .fv__cursor::after {
+  animation: fv-cursor 1s steps(1) infinite;
+  background: #8ff0c8;
+  content: "";
+  height: 0.95em;
+  left: 0.12em;
+  position: absolute;
+  top: -0.8em;
+  width: 0.09em;
+}
+.fv.fv--hero .fv__catch.is-typing .fv__cursor::after {
+  animation: none;
+}
+.fv.fv--hero .fv__area-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.fv.fv--hero .fv__area {
+  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.fv.fv--hero .fv__area:hover {
+  background: rgba(255, 255, 255, 0.26);
+  border-color: #fff;
+}
+
+@keyframes fv-cursor {
+  50% {
+    opacity: 0;
+  }
+}
+@media (min-width: 768px) {
+  .fv.fv--hero {
+    height: 100vh;
+    height: 100svh;
+    min-height: 600px;
+  }
+  .fv.fv--hero .fv__panel {
+    height: 100%;
+    justify-content: center;
+    padding: clamp(96px, 14vh, 150px) 0 clamp(40px, 8vh, 90px) clamp(24px, 8.4vw, 160px);
+    width: min(100%, 860px);
+  }
+  .fv.fv--hero .fv__label--main {
+    font-size: clamp(15px, 1.25vw, 22px);
+    outline-offset: -5px;
+    outline-width: 2px;
+    padding: 0.35em 0.9em;
+  }
+  .fv.fv--hero .fv__label--sub {
+    font-size: clamp(12px, 0.95vw, 17px);
+  }
+  .fv.fv--hero .fv__eyebrow {
+    font-size: clamp(12px, 0.95vw, 16px);
+    margin-top: clamp(24px, 4vh, 40px);
+  }
+  .fv.fv--hero .fv__catch {
+    font-size: clamp(30px, 3.5vw, 60px);
+    margin-top: 10px;
+  }
+  .fv.fv--hero .fv__areas {
+    margin-top: clamp(28px, 5vh, 48px);
+  }
+  .fv.fv--hero .fv__area-list {
+    gap: 10px;
+  }
+  .fv.fv--hero .fv__area {
+    font-size: clamp(14px, 1.05vw, 18px);
+    height: 44px;
+    padding: 0 1.5em;
+  }
+  .fv.fv--hero .fv__actions {
+    align-items: stretch;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: clamp(24px, 4vh, 36px);
+  }
+  .fv.fv--hero .fv__btn {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    font-size: clamp(14px, 1.05vw, 18px);
+    height: 56px;
+    width: 240px;
+  }
+}
+@media (max-width: 767px) {
+  .fv.fv--hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .fv.fv--hero .fv__media {
+    display: block;
+  }
+  .fv.fv--hero .fv__media::before {
+    background: linear-gradient(180deg, rgba(6, 48, 26, 0.75) 0%, rgba(6, 48, 26, 0.45) 18%, rgba(6, 48, 26, 0.8) 36%, rgba(6, 48, 26, 0.8) 64%, rgba(6, 48, 26, 0.45) 80%, rgba(6, 48, 26, 0.9) 100%);
+  }
+  .fv.fv--hero .fv__media::after {
+    background-size: 22px 22px;
+    mask-image: none;
+  }
+  .fv.fv--hero .fv__video {
+    inset: 0;
+    position: absolute;
+  }
+  .fv.fv--hero .fv__logo {
+    left: 16px;
+    margin: 0;
+    position: absolute;
+    top: 14px;
+    width: 92px;
+  }
+  .fv.fv--hero .fv__panel {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 72px 18px 20px;
+  }
+  .fv.fv--hero .fv__labels {
+    margin-top: auto;
+  }
+  .fv.fv--hero .fv__labels {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .fv.fv--hero .fv__label--main {
+    font-size: clamp(11px, 3.5vw, 13px);
+    margin: 0;
+    outline-offset: -4px;
+    padding: 0.4em 0.75em;
+  }
+  .fv.fv--hero .fv__label--sub {
+    font-size: clamp(10px, 2.95vw, 11.5px);
+    margin: 0;
+    outline-offset: -4px;
+    padding: 0.4em 0.7em;
+  }
+  .fv.fv--hero .fv__eyebrow {
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    margin-top: 18px;
+  }
+  .fv.fv--hero .fv__catch {
+    font-size: clamp(19px, 6.4vw, 28px);
+    line-height: 1.4;
+    margin: 6px 0 auto;
+    white-space: nowrap;
+  }
+  .fv.fv--hero .fv__areas {
+    margin-top: 24px;
+  }
+  .fv.fv--hero .fv__area-list {
+    gap: 6px;
+  }
+  .fv.fv--hero .fv__area-list li {
+    flex: 1 1 0;
+  }
+  .fv.fv--hero .fv__area {
+    font-size: 14px;
+    height: 36px;
   }
 }
 .courses {
