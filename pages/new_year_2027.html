@@ -37,7 +37,7 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="../css/new_year_2027.css?v=20261115024159" />
+        <link rel="stylesheet" href="../css/new_year_2027.css?v=20261118102337" />
         <title>
             本格的なプログラミングで春からスタートダッシュを！｜BeEngineer
         </title>
@@ -56,6 +56,7 @@
                     - 通常：従来のデザイン
                     - URL に ?fv=1 ：パターン1（fv--hero：動画を全面に敷き、濃い緑のグラデーションを重ねる。firstview_hero.scss / fv_hero.js）
                     - URL に ?fv=2 ：パターン2（fv--light：明るいグラデーション背景に、角丸の枠に入れた動画。firstview_light.scss）
+                    - URL に ?fv=3 ：パターン3（fv--bento：情報をタイルに分けて並べるベントグリッド。スクロール誘導付き。firstview_bento.scss）
                     切り替えは components/fv_patterns.js
                 -->
                 <section
@@ -112,13 +113,47 @@
                             SPRING&nbsp;&nbsp;FREE TRIAL &amp; EVENT
                         </p>
 
-                        <!-- 新デザインでは1文字ずつ打ち込むように表示（fv_hero.js） -->
+                        <!-- パターン3のみ表示：キャッチの上の一言 -->
+                        <p class="fv__lead">
+                            中学生・高校生のためのプログラミング教室
+                        </p>
+
+                        <!-- パターン1では1文字ずつ打ち込むように表示（fv_hero.js） -->
                         <p class="fv__catch">
                             <span class="fv__catch-line"
                                 >本格的なプログラミングで</span
                             ><span class="fv__catch-line fv__catch-line--accent"
                                 >春からスタートダッシュを！</span
                             >
+                        </p>
+
+                        <!-- パターン3のみ表示：情報タイル（注目講座はタップで講座モーダルを開く） -->
+                        <button
+                            class="fv__tile fv__tile--featured"
+                            type="button"
+                            data-course="white-hacker"
+                            aria-haspopup="dialog"
+                        >
+                            <span class="fv__tile-label">FEATURED COURSE</span>
+                            <span class="fv__tile-title"
+                                >ホワイトハッカー体験</span
+                            >
+                            <span class="fv__tile-text"
+                                >脆弱なサイトへの攻撃を防いでみよう</span
+                            >
+                            <span class="fv__tile-more">講座の詳細を見る</span>
+                        </button>
+                        <p class="fv__tile fv__tile--fee">
+                            <span class="fv__tile-label">参加費</span>
+                            <span class="fv__tile-value">¥0</span>
+                            <span class="fv__tile-text"
+                                >無料体験・無料イベント</span
+                            >
+                        </p>
+                        <p class="fv__tile fv__tile--target">
+                            <span class="fv__tile-label">対象</span>
+                            <span class="fv__tile-value">中1〜高3</span>
+                            <span class="fv__tile-text">中学生・高校生</span>
                         </p>
 
                         <nav class="fv__areas" aria-label="開催エリア">
@@ -171,6 +206,13 @@
                                 >メールで申し込む</a
                             >
                         </div>
+
+                        <!-- パターン3のみ表示：下のセクションへのスクロール誘導 -->
+                        <a class="fv__scroll" href="#courses">
+                            <span class="fv__scroll-text"
+                                >講座と日程を見る</span
+                            >
+                        </a>
                     </div>
                 </section>
 
@@ -1335,6 +1377,6 @@
             />
             <span class="line-follow__text">LINEで<br />申し込む</span>
         </a>
-        <script type="module" src="../src/new_year_2027/main.js?v=20261115024159" defer></script>
+        <script type="module" src="../src/new_year_2027/main.js?v=20261118102337" defer></script>
     </body>
 </html>

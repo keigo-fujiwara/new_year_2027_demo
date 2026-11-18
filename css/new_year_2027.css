@@ -654,7 +654,7 @@ template {
 .fv__logo img.fv__logo-img--white {
   display: none;
 }
-.fv__eyebrow {
+.fv__eyebrow, .fv__lead, .fv__tile, .fv__scroll {
   display: none;
 }
 .fv__panel {
@@ -1376,6 +1376,449 @@ li:last-child .fv__area {
   .fv.fv--light .fv__area {
     font-size: 14px;
     height: 36px;
+  }
+}
+.fv.fv--bento {
+  background: radial-gradient(ellipse 700px 420px at 15% 0%, rgba(0, 166, 81, 0.16) 0%, rgba(0, 166, 81, 0) 100%), #0b110e;
+  color: #fff;
+  display: grid;
+  height: auto;
+  min-height: 0;
+  position: relative;
+}
+.fv.fv--bento .fv__media,
+.fv.fv--bento .fv__panel {
+  display: contents;
+}
+.fv.fv--bento .fv__labels,
+.fv.fv--bento .fv__eyebrow {
+  display: none;
+}
+.fv.fv--bento .fv__logo-img--color {
+  display: none;
+}
+.fv.fv--bento .fv__logo-img--white {
+  display: block;
+}
+.fv.fv--bento .fv__logo {
+  left: auto;
+  margin: 0;
+  position: static;
+  top: auto;
+}
+.fv.fv--bento .fv__video {
+  border-radius: 18px;
+  height: 100%;
+  inset: auto;
+  min-height: 0;
+  object-fit: cover;
+  position: static;
+  width: 100%;
+  z-index: 0;
+}
+.fv.fv--bento::before {
+  background: linear-gradient(135deg, rgba(30, 110, 58, 0.86) 0%, rgba(6, 48, 26, 0.94) 100%);
+  border-radius: 18px;
+  content: "";
+  z-index: 1;
+}
+.fv.fv--bento .fv__lead {
+  color: #8ff0c8;
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  z-index: 2;
+}
+.fv.fv--bento .fv__catch {
+  color: #fff;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  padding: 0;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 2;
+}
+.fv.fv--bento .fv__catch-line--accent {
+  color: #8ff0c8;
+}
+.fv.fv--bento .fv__tile {
+  background: #141b17;
+  border: 1px solid #27322c;
+  border-radius: 18px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.fv.fv--bento .fv__tile-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.fv.fv--bento .fv__tile-value {
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  margin-top: 4px;
+}
+.fv.fv--bento .fv__tile-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  margin-top: 4px;
+}
+.fv.fv--bento .fv__tile--featured {
+  cursor: pointer;
+  font: inherit;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.fv.fv--bento .fv__tile--featured:hover {
+  border-color: rgba(143, 240, 200, 0.6);
+  transform: translateY(-3px);
+}
+.fv.fv--bento .fv__tile--featured:focus-visible {
+  outline: 3px solid #8ff0c8;
+  outline-offset: 2px;
+}
+.fv.fv--bento .fv__tile--featured .fv__tile-label {
+  color: #8ff0c8;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: 0.14em;
+}
+.fv.fv--bento .fv__tile--featured .fv__tile-text {
+  color: #8ff0c8;
+}
+.fv.fv--bento .fv__tile-title {
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  margin-top: 6px;
+}
+.fv.fv--bento .fv__tile-more {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+.fv.fv--bento .fv__tile-more::after {
+  content: " →";
+}
+.fv.fv--bento .fv__tile--fee {
+  background: #00a651;
+  border-color: #00a651;
+}
+.fv.fv--bento .fv__tile--fee .fv__tile-label,
+.fv.fv--bento .fv__tile--fee .fv__tile-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+.fv.fv--bento::after {
+  background: #141b17;
+  border: 1px solid #27322c;
+  border-radius: 18px;
+  content: "";
+  z-index: 0;
+}
+.fv.fv--bento .fv__areas {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  margin-top: 0;
+  z-index: 1;
+}
+.fv.fv--bento .fv__areas::before {
+  color: rgba(255, 255, 255, 0.7);
+  content: "開催エリア";
+  flex: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.fv.fv--bento .fv__area-list {
+  display: flex;
+  gap: 8px;
+}
+.fv.fv--bento .fv__area {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 0.9em;
+  transition: background-color 0.2s, color 0.2s;
+}
+.fv.fv--bento .fv__area:hover {
+  background: #fff;
+  color: #0b110e;
+}
+.fv.fv--bento .fv__scroll {
+  align-items: center;
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-self: center;
+  text-decoration: none;
+}
+.fv.fv--bento .fv__scroll::before {
+  color: #8ff0c8;
+  content: "SCROLL";
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+}
+.fv.fv--bento .fv__scroll::after {
+  animation: fv-scroll-line 1.8s ease-in-out infinite;
+  background: linear-gradient(#8ff0c8, rgba(143, 240, 200, 0));
+  content: "";
+  height: 36px;
+  margin-top: 4px;
+  transform-origin: top;
+  width: 2px;
+}
+.fv.fv--bento .fv__scroll:hover .fv__scroll-text {
+  color: #fff;
+}
+.fv.fv--bento .fv__scroll-text {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  transition: color 0.2s;
+}
+.fv.fv--bento .fv__video, .fv.fv--bento::before,
+.fv.fv--bento .fv__lead,
+.fv.fv--bento .fv__catch {
+  animation: fv-bento-in 0.6s ease backwards;
+}
+.fv.fv--bento .fv__tile--featured {
+  animation: fv-bento-in 0.6s 0.12s ease backwards;
+}
+.fv.fv--bento .fv__tile--fee {
+  animation: fv-bento-in 0.6s 0.24s ease backwards;
+}
+.fv.fv--bento .fv__tile--target {
+  animation: fv-bento-in 0.6s 0.36s ease backwards;
+}
+.fv.fv--bento::after,
+.fv.fv--bento .fv__areas {
+  animation: fv-bento-in 0.6s 0.48s ease backwards;
+}
+.fv.fv--bento .fv__scroll {
+  animation: fv-bento-in 0.6s 0.8s ease backwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fv.fv--bento *, .fv.fv--bento::before, .fv.fv--bento::after,
+  .fv.fv--bento .fv__scroll::after {
+    animation: none !important;
+  }
+}
+
+@keyframes fv-bento-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+@keyframes fv-scroll-line {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(1) translateY(12px);
+  }
+}
+@media (min-width: 768px) {
+  .fv.fv--bento {
+    column-gap: 16px;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto clamp(140px, 21vh, 210px) clamp(140px, 21vh, 210px) auto auto;
+    padding: 24px max(40px, (100% - 1160px) / 2) 0;
+    row-gap: 16px;
+  }
+  .fv.fv--bento .fv__logo {
+    grid-column: 1/-1;
+    grid-row: 1;
+    width: 120px;
+  }
+  .fv.fv--bento .fv__video, .fv.fv--bento::before {
+    grid-column: 1;
+    grid-row: 2/4;
+  }
+  .fv.fv--bento .fv__lead {
+    align-self: end;
+    font-size: 14px;
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0 28px;
+  }
+  .fv.fv--bento .fv__catch {
+    align-self: start;
+    font-size: clamp(22px, 2.2vw, 30px);
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: -6px;
+    padding: 0 28px;
+  }
+  .fv.fv--bento .fv__tile {
+    padding: 22px 28px;
+  }
+  .fv.fv--bento .fv__tile--featured {
+    grid-column: 2/4;
+    grid-row: 2;
+  }
+  .fv.fv--bento .fv__tile-title {
+    font-size: clamp(22px, 2vw, 30px);
+  }
+  .fv.fv--bento .fv__tile--fee {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .fv.fv--bento .fv__tile--target {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  .fv.fv--bento .fv__tile-value {
+    font-size: clamp(30px, 3vw, 48px);
+  }
+  .fv.fv--bento::after,
+  .fv.fv--bento .fv__areas,
+  .fv.fv--bento .fv__actions {
+    grid-column: 1/-1;
+    grid-row: 4;
+  }
+  .fv.fv--bento .fv__areas {
+    justify-self: start;
+    padding: 24px 0 24px 28px;
+  }
+  .fv.fv--bento .fv__area {
+    font-size: 14px;
+  }
+  .fv.fv--bento .fv__actions {
+    align-self: center;
+    flex-direction: row;
+    gap: 12px;
+    justify-self: end;
+    margin-top: 0;
+    padding-right: 28px;
+    z-index: 1;
+  }
+  .fv.fv--bento .fv__btn {
+    border: 0;
+    font-size: 14px;
+    height: 48px;
+    width: 200px;
+  }
+  .fv.fv--bento .fv__scroll {
+    grid-column: 1/-1;
+    grid-row: 5;
+    padding: 18px 0 22px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1100px) {
+  .fv.fv--bento .fv__areas {
+    grid-row: 4;
+    padding-bottom: 84px;
+  }
+  .fv.fv--bento .fv__actions {
+    align-self: end;
+    justify-self: start;
+    padding: 0 0 22px 28px;
+  }
+}
+@media (max-width: 767px) {
+  .fv.fv--bento {
+    column-gap: 10px;
+    grid-template-areas: none;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto minmax(84px, auto) auto auto auto auto auto;
+    padding: 0 14px;
+    row-gap: 10px;
+  }
+  .fv.fv--bento .fv__logo {
+    grid-area: 1/1/2/-1;
+    margin: 14px 0 4px 2px;
+    width: 92px;
+  }
+  .fv.fv--bento .fv__video, .fv.fv--bento::before {
+    grid-area: 2/1/4/-1;
+  }
+  .fv.fv--bento .fv__lead {
+    align-self: end;
+    font-size: clamp(10.5px, 3.4vw, 12px);
+    grid-area: 2/1/3/-1;
+    padding: 0 20px;
+  }
+  .fv.fv--bento .fv__catch {
+    align-self: start;
+    font-size: clamp(19px, 6vw, 24px);
+    grid-area: 3/1/4/-1;
+    margin: -8px 0 0;
+    padding: 0 20px 22px;
+  }
+  .fv.fv--bento .fv__tile {
+    padding: 14px;
+  }
+  .fv.fv--bento .fv__tile--featured {
+    grid-area: 4/1/5/-1;
+  }
+  .fv.fv--bento .fv__tile-title {
+    font-size: 19px;
+  }
+  .fv.fv--bento .fv__tile-more {
+    margin-top: 8px;
+  }
+  .fv.fv--bento .fv__tile--fee {
+    grid-area: 5/1/6/2;
+  }
+  .fv.fv--bento .fv__tile--target {
+    grid-area: 5/2/6/3;
+  }
+  .fv.fv--bento .fv__tile-value {
+    font-size: clamp(20px, 6.6vw, 26px);
+    white-space: nowrap;
+  }
+  .fv.fv--bento .fv__tile-text {
+    font-size: 11.5px;
+  }
+  .fv.fv--bento::after,
+  .fv.fv--bento .fv__areas {
+    grid-area: 6/1/7/-1;
+  }
+  .fv.fv--bento .fv__areas {
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px;
+  }
+  .fv.fv--bento .fv__areas::before {
+    align-self: flex-start;
+    font-size: 11px;
+    padding-left: 4px;
+  }
+  .fv.fv--bento .fv__area-list {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+  }
+  .fv.fv--bento .fv__area-list li {
+    flex: 1 1 0;
+  }
+  .fv.fv--bento .fv__area {
+    border-left: 1px solid rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    height: 34px;
+    padding: 0;
+  }
+  .fv.fv--bento .fv__scroll {
+    grid-area: 7/1/8/-1;
+    padding: 14px 0 18px;
   }
 }
 .courses {

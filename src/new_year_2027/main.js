@@ -1,10 +1,10 @@
-import CustomLinkHandler from '../common/custom_link.js?v=20261115024159';
-import initLineFollow from './components/line_follow.js?v=20261115024159';
-import initFvPattern from './components/fv_patterns.js?v=20261115024159';
-import initSchedule from './components/schedule.js?v=20261115024159';
-import initCourseModal from './components/course_modal.js?v=20261115024159';
-import initVoiceModal from './components/voice_modal.js?v=20261115024159';
-import initMarquee from './tools/marquee.js?v=20261115024159';
+import CustomLinkHandler from '../common/custom_link.js?v=20261118102337';
+import initLineFollow from './components/line_follow.js?v=20261118102337';
+import initFvPattern from './components/fv_patterns.js?v=20261118102337';
+import initSchedule from './components/schedule.js?v=20261118102337';
+import initCourseModal from './components/course_modal.js?v=20261118102337';
+import initVoiceModal from './components/voice_modal.js?v=20261118102337';
+import initMarquee from './tools/marquee.js?v=20261118102337';
 
 document.addEventListener('DOMContentLoaded', async () => {
     // ファーストビュー（キャッチコピーの演出）
