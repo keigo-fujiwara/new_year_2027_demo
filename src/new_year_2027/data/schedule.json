@@ -513,18 +513,6 @@
             "duration": "60分"
         },
         {
-            "campus": "tokyo",
-            "date": "3/22",
-            "events": [
-                {
-                    "name": "東京大学見学会",
-                    "type": "tour"
-                }
-            ],
-            "time": "時間未定",
-            "duration": ""
-        },
-        {
             "campus": "yokohama",
             "date": "2/6",
             "events": [

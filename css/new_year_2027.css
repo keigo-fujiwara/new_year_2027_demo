@@ -2011,6 +2011,11 @@ li:last-child .fv__area {
   .course-card--event .course-card__meta {
     font-size: 10px;
   }
+  .course-card--event:only-child {
+    grid-column: 1/-1;
+    justify-self: center;
+    width: calc(50% - 3.5px);
+  }
 }
 
 @media (min-width: 768px) {
