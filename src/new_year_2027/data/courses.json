@@ -74,8 +74,8 @@
                     "alt": "メェーメェーランゲームのプレイ画面"
                 },
                 {
-                    "src": "../assets/images/new_year_2027/jpg/work_2d_run.jpg",
-                    "alt": "過去の参加者が作った2Dランゲームの画面"
+                    "src": "../assets/images/new_year_2027/png/mee_mee_run_sheep.png",
+                    "alt": "メェーメェーランゲームに登場するヒツジのイラスト"
                 }
             ],
             "scheduleEvents": ["メェーメェーランゲーム"]

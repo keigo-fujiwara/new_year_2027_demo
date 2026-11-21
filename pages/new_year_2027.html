@@ -37,7 +37,7 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="../css/new_year_2027.css?v=20261121050420" />
+        <link rel="stylesheet" href="../css/new_year_2027.css?v=20261121051912" />
         <title>
             本格的なプログラミングで春からスタートダッシュを！｜BeEngineer
         </title>
@@ -253,6 +253,9 @@
                                                     >60分</span
                                                 >コース
                                             </span>
+                                            <span class="course-card__more"
+                                                >詳しく</span
+                                            >
                                         </span>
                                     </button>
                                 </li>
@@ -282,6 +285,9 @@
                                                     >60分</span
                                                 >コース
                                             </span>
+                                            <span class="course-card__more"
+                                                >詳しく</span
+                                            >
                                         </span>
                                     </button>
                                 </li>
@@ -294,10 +300,12 @@
                                         data-course="scraping"
                                         aria-haspopup="dialog"
                                     >
+                                        <!-- 縦長の画像なので、SPで横長に切り抜くときはイラストのある上側を残す -->
                                         <img
                                             class="course-card__img"
-                                            src="../assets/images/new_year_2027/jpg/Scraping.jpg"
-                                            alt="Pythonでの情報収集プログラム"
+                                            style="object-position: center top"
+                                            src="../assets/images/new_year_2027/png/scraping_card.png"
+                                            alt="Webサイトから文章を自動で取り出すイメージ図"
                                             loading="lazy"
                                             decoding="async"
                                         />
@@ -313,6 +321,9 @@
                                                     >120分</span
                                                 >コース
                                             </span>
+                                            <span class="course-card__more"
+                                                >詳しく</span
+                                            >
                                         </span>
                                     </button>
                                 </li>
@@ -342,6 +353,9 @@
                                                     >120分</span
                                                 >コース
                                             </span>
+                                            <span class="course-card__more"
+                                                >詳しく</span
+                                            >
                                         </span>
                                     </button>
                                 </li>
@@ -354,20 +368,15 @@
                                         data-course="white-hacker"
                                         aria-haspopup="dialog"
                                     >
-                                        <!-- 横長のサムネイルなので切り抜かず全体を収める（余白は画像の地色） -->
                                         <img
-                                            class="course-card__img course-card__img--contain"
-                                            style="
-                                                --img-bg: #aca4ff;
-                                                --img-pad: 0;
-                                            "
-                                            src="../assets/images/new_year_2027/png/white_hacker.png"
-                                            alt="White Hacker"
+                                            class="course-card__img"
+                                            src="../assets/images/new_year_2027/png/white_hacker_card.png"
+                                            alt="ブラウザの画面を盾と鍵で守るイラスト"
                                             loading="lazy"
                                             decoding="async"
                                         />
                                         <span class="course-card__body">
-                                            <!-- 注目ラベル・紹介文・詳細リンクはPCのみ表示 -->
+                                            <!-- 紹介文はPCのみ表示 -->
                                             <span class="course-card__label"
                                                 >注目講座</span
                                             >
@@ -386,7 +395,7 @@
                                                 脆弱なサイトへの攻撃を防ぐ体験を通して、ネットワークとセキュリティ対策の基礎を学びます。
                                             </span>
                                             <span class="course-card__more"
-                                                >講座の詳細を見る</span
+                                                >詳しく</span
                                             >
                                         </span>
                                     </button>
@@ -421,6 +430,9 @@
                                         <span class="course-card__meta">
                                             体験講座と同時開催
                                         </span>
+                                        <span class="course-card__more"
+                                            >詳しく</span
+                                        >
                                     </span>
                                 </button>
                             </li>
@@ -446,6 +458,9 @@
                                         <span class="course-card__meta">
                                             体験講座と同時開催
                                         </span>
+                                        <span class="course-card__more"
+                                            >詳しく</span
+                                        >
                                     </span>
                                 </button>
                             </li>
@@ -1385,6 +1400,6 @@
             />
             <span class="line-follow__text">LINEで<br />質問する</span>
         </a>
-        <script type="module" src="../src/new_year_2027/main.js?v=20261121050420" defer></script>
+        <script type="module" src="../src/new_year_2027/main.js?v=20261121051912" defer></script>
     </body>
 </html>
