@@ -1906,7 +1906,7 @@ li:last-child .fv__area {
   letter-spacing: 0.06em;
   line-height: 1;
   margin: auto 0 6px;
-  padding: calc(5px - 0.05em) 14px calc(5px + 0.05em);
+  padding: calc(5px - 0.08em) 14px calc(5px + 0.08em);
 }
 .course-card__meta {
   margin-bottom: 6px;
@@ -2081,7 +2081,7 @@ li:last-child .fv__area {
   .course-card--featured .course-card__more {
     font-size: 14px;
     margin: 16px 0 0;
-    padding: calc(7px - 0.05em) 20px calc(7px + 0.05em);
+    padding: calc(7px - 0.08em) 20px calc(7px + 0.08em);
   }
   .course-card--event .course-card__button {
     gap: 20px;
