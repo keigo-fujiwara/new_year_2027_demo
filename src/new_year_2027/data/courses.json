@@ -90,12 +90,12 @@
             "worksTitle": "講座のイメージ",
             "works": [
                 {
-                    "src": "../assets/images/new_year_2027/png/white_hacker.png",
-                    "alt": "White Hacker"
+                    "src": "../assets/images/new_year_2027/png/white_hacker_card.png",
+                    "alt": "ブラウザの画面を盾と鍵で守るイラスト"
                 },
                 {
-                    "src": "",
-                    "alt": ""
+                    "src": "../assets/images/new_year_2027/png/white_hacker.png",
+                    "alt": "White Hacker"
                 }
             ],
             "scheduleEvents": ["ホワイトハッカー"]

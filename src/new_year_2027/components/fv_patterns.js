@@ -6,7 +6,7 @@
  *   ?fv=3 … パターン3（fv--bento）：情報をタイルに分けて並べるベントグリッド（スクロール誘導付き）
  * TODO: デザイン確定後、採用しないパターンとこの切り替えを削除する
  */
-import { typeCatch } from './fv_hero.js?v=20261121051912';
+import { typeCatch } from './fv_hero.js?v=20261121052315';
 
 const PATTERNS = {
     1: {
