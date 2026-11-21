@@ -1,6 +1,6 @@
 {
     "year": 2027,
-    "holidays": ["2/11", "2/23"],
+    "holidays": ["2/11", "2/23", "3/22"],
     "campuses": [
         {
             "key": "kyoto",
@@ -483,14 +483,10 @@
                 {
                     "name": "ホワイトハッカー",
                     "type": "advanced"
-                },
-                {
-                    "name": "東京大学見学会",
-                    "type": "tour"
                 }
             ],
-            "time": "13:00-16:00",
-            "duration": "180分"
+            "time": "14:00-16:00",
+            "duration": "120分"
         },
         {
             "campus": "tokyo",
@@ -515,6 +511,18 @@
             ],
             "time": "11:00-12:00",
             "duration": "60分"
+        },
+        {
+            "campus": "tokyo",
+            "date": "3/22",
+            "events": [
+                {
+                    "name": "東京大学見学会",
+                    "type": "tour"
+                }
+            ],
+            "time": "時間未定",
+            "duration": ""
         },
         {
             "campus": "yokohama",
