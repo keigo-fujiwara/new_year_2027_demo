@@ -1835,23 +1835,20 @@ li:last-child .fv__area {
   max-width: 960px;
 }
 .courses__group {
-  margin-bottom: 46px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, 212px);
+  justify-content: center;
+  margin: 30px 0 46px;
+}
+.courses__group > .courses__list {
+  display: contents;
 }
 @media (max-width: 767px) {
   .courses__group {
-    margin-bottom: 44px;
-  }
-}
-@media (min-width: 768px) {
-  .courses__group {
-    display: grid;
-    gap: 24px;
-    grid-template-columns: repeat(auto-fit, 212px);
-    justify-content: center;
-    margin-top: 30px;
-  }
-  .courses__group > .courses__list {
-    display: contents;
+    gap: 14px 7px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 28px 0 44px;
   }
 }
 .courses__list {
@@ -1864,17 +1861,6 @@ li:last-child .fv__area {
 }
 .courses__list:last-child {
   margin-bottom: 0;
-}
-.courses__list:has(+ .courses__list) {
-  margin-bottom: 0;
-}
-.courses__list + .courses__list {
-  margin-top: 24px;
-}
-@media (max-width: 767px) {
-  .courses__list + .courses__list {
-    margin-top: 14px;
-  }
 }
 @media (max-width: 767px) {
   .courses__list {
@@ -1898,6 +1884,10 @@ li:last-child .fv__area {
 }
 .course-card--event {
   border: 4px solid #8ddcd6;
+}
+.course-card--featured {
+  grid-column: 1/-1;
+  order: -1;
 }
 .course-card__label, .course-card__lead, .course-card__more {
   display: none;
@@ -1973,6 +1963,9 @@ li:last-child .fv__area {
   .course-card__br {
     display: inline;
   }
+  .course-card__img {
+    aspect-ratio: 4/3;
+  }
   .course-card__body {
     padding: 4px 10px 2px;
   }
@@ -2004,8 +1997,6 @@ li:last-child .fv__area {
   .course-card--featured {
     border: 0;
     box-shadow: 0 4px 18px rgba(31, 79, 224, 0.18);
-    grid-column: 1/-1;
-    order: -1;
     outline: 4px solid #aca4ff;
     outline-offset: -4px;
   }
@@ -2080,6 +2071,41 @@ li:last-child .fv__area {
   .course-card--event .course-card__meta {
     font-size: 14px;
     padding-top: 8px;
+  }
+}
+@media (max-width: 767px) {
+  .course-card--featured {
+    border: 0;
+    box-shadow: 0 4px 14px rgba(31, 79, 224, 0.18);
+    outline: 3px solid #aca4ff;
+    outline-offset: -3px;
+  }
+  .course-card--featured .course-card__img {
+    aspect-ratio: 16/9;
+  }
+  .course-card--featured .course-card__body {
+    padding: 10px 14px 4px;
+  }
+  .course-card--featured .course-card__label {
+    background: #1f4fe0;
+    border-radius: 999px;
+    color: #fff;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    padding: 5px 12px;
+  }
+  .course-card--featured .course-card__br {
+    display: none;
+  }
+  .course-card--featured .course-card__title {
+    font-size: 19px;
+    margin-top: 6px;
+  }
+  .course-card--featured .course-card__meta {
+    font-size: 13px;
   }
 }
 html.is-modal-open {
@@ -2738,7 +2764,7 @@ html.is-modal-open {
   min-width: 0;
 }
 .schedule__badge {
-  background: #a8737f;
+  background: #ec4f5c;
   box-sizing: content-box;
   color: #fff;
   display: inline-block;
@@ -2751,10 +2777,10 @@ html.is-modal-open {
   width: var(--schedule-badge-w, auto);
 }
 .schedule__badge--advanced {
-  background: #c39c4f;
+  background: #2f62e8;
 }
 .schedule__badge--tour {
-  background: #df8a76;
+  background: #0e9b8c;
 }
 .schedule__empty, .schedule__error {
   font-size: 14px;
@@ -2969,14 +2995,15 @@ html.is-modal-open {
   }
 }
 .value__lead {
-  font-size: 18px;
-  letter-spacing: 0.04em;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
   text-align: center;
 }
 @media (max-width: 767px) {
   .value__lead {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 19px;
   }
 }
 .value__cards {
@@ -3021,6 +3048,12 @@ html.is-modal-open {
 }
 .value__nobr {
   white-space: nowrap;
+}
+.value__em {
+  background: linear-gradient(transparent 64%, #f8e71c 64%, #f8e71c 92%, transparent 92%);
+  color: #00a651;
+  font-style: normal;
+  padding: 0 0.08em;
 }
 .value__text {
   font-size: 16px;
@@ -3141,39 +3174,38 @@ html.is-modal-open {
   .value__inner {
     padding: 0 20px;
   }
-  .value__lead {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.6;
-  }
   .value__cards {
     gap: 20px;
   }
   .value__lang {
-    align-items: center;
+    align-items: end;
     display: grid;
-    gap: 8px 10px;
+    gap: 4px 8px;
     grid-template-areas: ". python dart" "text text text";
     grid-template-columns: 1fr auto auto;
     margin: 48px auto 0;
     width: fit-content;
   }
+  .value__lang-logo {
+    transform: translateX(32px);
+  }
   .value__lang-logo--python {
     grid-area: python;
-    width: 40px;
+    width: 46px;
   }
   .value__lang-logo--dart {
     grid-area: dart;
-    width: 72px;
+    height: 40px;
+    object-fit: cover;
+    width: 74px;
   }
   .value__lang-text {
-    font-size: clamp(12px, 3.9vw, 15px);
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    line-height: 1.7;
+    font-size: clamp(14px, 4.27vw, 16px);
+    font-weight: 400;
     grid-area: text;
+    letter-spacing: 0.02em;
+    line-height: 1.75;
     text-align: left;
-    white-space: nowrap;
   }
   .value__chunk {
     display: inline;
