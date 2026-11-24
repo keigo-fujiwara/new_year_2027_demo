@@ -5,9 +5,9 @@
  *   （courses.json の scheduleEvents と schedule.json の events[].name を突き合わせる）
  * - ×ボタン / 背景クリック / Escキーで閉じる
  */
-import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261124062330';
+import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261124100021';
 
-const COURSES_URL = '../src/new_year_2027/data/courses.json?v=20261124062330';
+const COURSES_URL = '../src/new_year_2027/data/courses.json?v=20261124100021';
 
 /**
  * "2/23" → 「2月」「23日」「(火祝)」
@@ -85,7 +85,7 @@ export default async function initCourseModal(modalSelector = '#course-modal') {
 
         $('.course-modal__title').textContent = course.title;
         $('.course-modal__subtitle').textContent =
-            course.worksTitle || '過去の参加者の作品';
+            course.worksTitle || '講座のイメージ';
         $('.course-modal__desc').innerHTML = course.description
             .map((p) => `<p>${escapeHtml(p)}</p>`)
             .join('');
