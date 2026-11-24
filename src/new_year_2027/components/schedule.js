@@ -6,7 +6,7 @@
  * - #schedule-<校舎キー> へのリンクで該当タブを開いてスクロール（FVのエリアリンク用）
  * - 校舎カードの「Googleマップで確認する」で地図を開閉
  */
-import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261121055645';
+import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261124055551';
 
 const HASH_PREFIX = '#schedule-';
 

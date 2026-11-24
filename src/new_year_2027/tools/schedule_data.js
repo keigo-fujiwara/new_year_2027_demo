@@ -2,20 +2,33 @@
  * 日程データ（data/schedule.json）の読み込みと共通処理
  * 校舎・日時セクションと講座モーダルで共有する
  */
-const SCHEDULE_URL = '../src/new_year_2027/data/schedule.json?v=20261121055645';
+const SCHEDULE_URL = '../src/new_year_2027/data/schedule.json?v=20261124055551';
 const DOW = ['日', '月', '火', '水', '木', '金', '土'];
 
 let schedulePromise = null;
 
+/**
+ * "hidden": true の校舎は、その日程も含めて表示しない
+ * （開催が未確定の校舎を、データを残したまま一時的に隠すため）
+ */
+function excludeHiddenCampuses(data) {
+    const hiddenKeys = data.campuses.filter((c) => c.hidden).map((c) => c.key);
+    return {
+        ...data,
+        campuses: data.campuses.filter((c) => !c.hidden),
+        items: data.items.filter((item) => !hiddenKeys.includes(item.campus)),
+    };
+}
+
 /** schedule.json を1回だけ取得して使い回す */
 export function loadSchedule() {
     if (!schedulePromise) {
-        schedulePromise = fetch(SCHEDULE_URL, { cache: 'no-cache' }).then(
-            (res) => {
+        schedulePromise = fetch(SCHEDULE_URL, { cache: 'no-cache' })
+            .then((res) => {
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 return res.json();
-            }
-        );
+            })
+            .then(excludeHiddenCampuses);
         // 失敗時は次回呼び出しで再取得できるようにする
         schedulePromise.catch(() => {
             schedulePromise = null;
