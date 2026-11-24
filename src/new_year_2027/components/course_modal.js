@@ -5,9 +5,12 @@
  *   （courses.json の scheduleEvents と schedule.json の events[].name を突き合わせる）
  * - ×ボタン / 背景クリック / Escキーで閉じる
  */
-import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261124100021';
-
-const COURSES_URL = '../src/new_year_2027/data/courses.json?v=20261124100021';
+import {
+    loadSchedule,
+    loadCourses,
+    getDow,
+    escapeHtml,
+} from '../tools/schedule_data.js?v=20261124123626';
 
 /**
  * "2/23" → 「2月」「23日」「(火祝)」
@@ -67,9 +70,7 @@ export default async function initCourseModal(modalSelector = '#course-modal') {
 
     let courses = [];
     try {
-        const res = await fetch(COURSES_URL, { cache: 'no-cache' });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        courses = (await res.json()).courses;
+        courses = await loadCourses();
     } catch (err) {
         console.error('[course_modal] 講座データの読み込みに失敗しました', err);
         return;

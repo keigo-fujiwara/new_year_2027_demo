@@ -2,10 +2,37 @@
  * 日程データ（data/schedule.json）の読み込みと共通処理
  * 校舎・日時セクションと講座モーダルで共有する
  */
-const SCHEDULE_URL = '../src/new_year_2027/data/schedule.json?v=20261124100021';
+const SCHEDULE_URL = '../src/new_year_2027/data/schedule.json?v=20261124123626';
+const COURSES_URL = '../src/new_year_2027/data/courses.json?v=20261124123626';
 const DOW = ['日', '月', '火', '水', '木', '金', '土'];
 
 let schedulePromise = null;
+let coursesPromise = null;
+
+/** courses.json の講座一覧を1回だけ取得して使い回す */
+export function loadCourses() {
+    if (!coursesPromise) {
+        coursesPromise = fetch(COURSES_URL, { cache: 'no-cache' })
+            .then((res) => {
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                return res.json();
+            })
+            .then((json) => json.courses);
+        coursesPromise.catch(() => {
+            coursesPromise = null;
+        });
+    }
+    return coursesPromise;
+}
+
+/** 日程の講座名（schedule.json の events[].name）→ 講座ID（courses.json の id） */
+export function courseIdsByEventName(courses) {
+    return new Map(
+        courses.flatMap((course) =>
+            course.scheduleEvents.map((name) => [name, course.id])
+        )
+    );
+}
 
 /**
  * "hidden": true の校舎は、その日程も含めて表示しない

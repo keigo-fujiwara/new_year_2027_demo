@@ -1931,6 +1931,21 @@ html.is-modal-open {
 .schedule__badge--tour {
   background: #0e9b8c;
 }
+.schedule__badge--vibe {
+  background: #ec4f5c;
+}
+.schedule__badge--web {
+  background: #e06a00;
+}
+.schedule__badge--scraping {
+  background: #2f62e8;
+}
+.schedule__badge--mee-mee-run {
+  background: #7a45d1;
+}
+.schedule__badge--white-hacker {
+  background: #1a2f6e;
+}
 .schedule__empty, .schedule__error {
   font-size: 14px;
   padding: 24px 0;

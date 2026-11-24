@@ -6,7 +6,13 @@
  * - #schedule-<校舎キー> へのリンクで該当タブを開いてスクロール（FVのエリアリンク用）
  * - 校舎カードの「Googleマップで確認する」で地図を開閉
  */
-import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261124100021';
+import {
+    loadSchedule,
+    loadCourses,
+    courseIdsByEventName,
+    getDow,
+    escapeHtml,
+} from '../tools/schedule_data.js?v=20261124123626';
 
 const HASH_PREFIX = '#schedule-';
 
@@ -29,11 +35,15 @@ function renderDay(date, items, data) {
     const dow = getDow(data.year, date, data.holidays || []);
     const sessions = items
         .map((item) => {
+            // 色は講座ごと（講座IDのクラス）。講座データにない名前は種類（type）の色
             const badges = item.events
-                .map(
-                    (ev) =>
-                        `<span class="schedule__badge schedule__badge--${escapeHtml(ev.type)}">${escapeHtml(ev.name)}</span>`
-                )
+                .map((ev) => {
+                    const courseId = data.courseIds.get(ev.name);
+                    const courseClass = courseId
+                        ? ` schedule__badge--${escapeHtml(courseId)}`
+                        : '';
+                    return `<span class="schedule__badge schedule__badge--${escapeHtml(ev.type)}${courseClass}">${escapeHtml(ev.name)}</span>`;
+                })
                 .join('');
             return `
                 <li class="schedule__session">
@@ -208,7 +218,12 @@ export default async function initSchedule(selector = '#schedule') {
     if (!root) return;
 
     try {
-        const data = await loadSchedule();
+        // 講座データが読めなくても日程は表示する（ラベルは種類ごとの色になる）
+        const [schedule, courses] = await Promise.all([
+            loadSchedule(),
+            loadCourses().catch(() => []),
+        ]);
+        const data = { ...schedule, courseIds: courseIdsByEventName(courses) };
 
         const tabsHtml = data.campuses
             .map((c, i) => renderTab(c, i === 0))
