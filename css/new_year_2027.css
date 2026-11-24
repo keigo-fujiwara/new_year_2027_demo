@@ -1004,6 +1004,26 @@ template {
 .course-card--event {
   border: 4px solid #8ddcd6;
 }
+.course-card--vibe {
+  --course-color: #ec4f5c;
+  border-top-color: #ec4f5c;
+}
+.course-card--web {
+  --course-color: #e06a00;
+  border-top-color: #e06a00;
+}
+.course-card--scraping {
+  --course-color: #2f62e8;
+  border-top-color: #2f62e8;
+}
+.course-card--mee-mee-run {
+  --course-color: #7a45d1;
+  border-top-color: #7a45d1;
+}
+.course-card--white-hacker {
+  --course-color: #1a2f6e;
+  border-top-color: #1a2f6e;
+}
 .course-card--featured {
   grid-column: 1/-1;
   order: -1;
@@ -1146,6 +1166,7 @@ template {
   }
   .course-card--featured {
     border: 0;
+    border-top: 9px solid var(--course-color, transparent);
     box-shadow: 0 4px 18px rgba(31, 79, 224, 0.18);
     outline: 4px solid #aca4ff;
     outline-offset: -4px;
@@ -1221,6 +1242,7 @@ template {
 @media (max-width: 767px) {
   .course-card--featured {
     border: 0;
+    border-top: 8px solid var(--course-color, transparent);
     box-shadow: 0 4px 14px rgba(31, 79, 224, 0.18);
     outline: 3px solid #aca4ff;
     outline-offset: -3px;
