@@ -37,7 +37,7 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="../css/new_year_2027.css?v=20261124055551" />
+        <link rel="stylesheet" href="../css/new_year_2027.css?v=20261124062330" />
         <title>
             本格的なプログラミングで春からスタートダッシュを！｜BeEngineer
         </title>
@@ -51,14 +51,6 @@
     <body>
         <div class="wrapper">
             <main>
-                <!--
-                    FVのデザイン比較（デザイン確定後、採用しないパターンは削除する）
-                    - 通常：従来のデザイン
-                    - URL に ?fv=1 ：パターン1（fv--hero：動画を全面に敷き、濃い緑のグラデーションを重ねる。firstview_hero.scss / fv_hero.js）
-                    - URL に ?fv=2 ：パターン2（fv--light：明るいグラデーション背景に、角丸の枠に入れた動画。firstview_light.scss）
-                    - URL に ?fv=3 ：パターン3（fv--bento：情報をタイルに分けて並べるベントグリッド。スクロール誘導付き。firstview_bento.scss）
-                    切り替えは components/fv_patterns.js
-                -->
                 <section
                     id="firstview"
                     class="fv"
@@ -82,14 +74,6 @@
                         </video>
                         <h1 class="fv__logo">
                             <img
-                                class="fv__logo-img fv__logo-img--color"
-                                src="../assets/images/new_year_2027/svg/logo_color.svg"
-                                alt="BeEngineer"
-                                decoding="async"
-                            />
-                            <!-- 新デザイン（動画の上）用の白ロゴ -->
-                            <img
-                                class="fv__logo-img fv__logo-img--white"
                                 src="../assets/images/new_year_2027/svg/logo_white.svg"
                                 alt="BeEngineer"
                                 decoding="async"
@@ -107,53 +91,18 @@
                             </p>
                         </div>
 
-                        <!-- 新デザインのみ表示：コード風の小見出し -->
                         <p class="fv__eyebrow" aria-hidden="true">
                             <span class="fv__eyebrow-mark">//</span> 2027
                             SPRING&nbsp;&nbsp;FREE TRIAL &amp; EVENT
                         </p>
 
-                        <!-- パターン3のみ表示：キャッチの上の一言 -->
-                        <p class="fv__lead">
-                            中学生・高校生のためのプログラミング教室
-                        </p>
-
-                        <!-- パターン1では1文字ずつ打ち込むように表示（fv_hero.js） -->
+                        <!-- 1文字ずつ打ち込むように表示（fv_catch.js） -->
                         <p class="fv__catch">
                             <span class="fv__catch-line"
                                 >本格的なプログラミングで</span
                             ><span class="fv__catch-line fv__catch-line--accent"
                                 >春からスタートダッシュを！</span
                             >
-                        </p>
-
-                        <!-- パターン3のみ表示：情報タイル（注目講座はタップで講座モーダルを開く） -->
-                        <button
-                            class="fv__tile fv__tile--featured"
-                            type="button"
-                            data-course="white-hacker"
-                            aria-haspopup="dialog"
-                        >
-                            <span class="fv__tile-label">FEATURED COURSE</span>
-                            <span class="fv__tile-title"
-                                >ホワイトハッカー体験</span
-                            >
-                            <span class="fv__tile-text"
-                                >脆弱なサイトへの攻撃を防いでみよう</span
-                            >
-                            <span class="fv__tile-more">講座の詳細を見る</span>
-                        </button>
-                        <p class="fv__tile fv__tile--fee">
-                            <span class="fv__tile-label">参加費</span>
-                            <span class="fv__tile-value">¥0</span>
-                            <span class="fv__tile-text"
-                                >無料体験・無料イベント</span
-                            >
-                        </p>
-                        <p class="fv__tile fv__tile--target">
-                            <span class="fv__tile-label">対象</span>
-                            <span class="fv__tile-value">中1〜高3</span>
-                            <span class="fv__tile-text">中学生・高校生</span>
                         </p>
 
                         <nav class="fv__areas" aria-label="開催エリア">
@@ -193,21 +142,12 @@
                             >
                             <a
                                 class="fv__btn fv__btn--mail"
-                                data-custom-link
-                                data-path="/lp/trial-lesson"
-                                data-has-refer
+                                data-apply-form
                                 href="#"
                                 target="apply_form"
                                 >メールで申し込む</a
                             >
                         </div>
-
-                        <!-- パターン3のみ表示：下のセクションへのスクロール誘導 -->
-                        <a class="fv__scroll" href="#courses">
-                            <span class="fv__scroll-text"
-                                >講座と日程を見る</span
-                            >
-                        </a>
                     </div>
                 </section>
 
@@ -471,9 +411,7 @@
                     <div class="cta__actions">
                         <a
                             class="cta__btn cta__btn--mail"
-                            data-custom-link
-                            data-path="/lp/trial-lesson"
-                            data-has-refer
+                            data-apply-form
                             href="#"
                             target="apply_form"
                             >メールで申し込む</a
@@ -1221,9 +1159,7 @@
                     <div class="cta__actions">
                         <a
                             class="cta__btn cta__btn--mail"
-                            data-custom-link
-                            data-path="/lp/trial-lesson"
-                            data-has-refer
+                            data-apply-form
                             href="#"
                             target="apply_form"
                             >メールで申し込む</a
@@ -1367,9 +1303,7 @@
                 <div class="course-modal__actions">
                     <a
                         class="course-modal__btn course-modal__btn--mail"
-                        data-custom-link
-                        data-path="/lp/trial-lesson"
-                        data-has-refer
+                        data-apply-form
                         href="#"
                         target="apply_form"
                         >メールで申し込む</a
@@ -1399,6 +1333,6 @@
             />
             <span class="line-follow__text">LINEで<br />申し込む</span>
         </a>
-        <script type="module" src="../src/new_year_2027/main.js?v=20261124055551" defer></script>
+        <script type="module" src="../src/new_year_2027/main.js?v=20261124062330" defer></script>
     </body>
 </html>

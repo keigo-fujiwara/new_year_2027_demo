@@ -1,9 +1,8 @@
 /**
- * ファーストビュー パターン1（fv--hero）
- * - キャッチコピーを1文字ずつ打ち込むように表示し、最後にカーソルを点滅させる
+ * ファーストビューのキャッチコピー
+ * - 1文字ずつ打ち込むように表示し、最後にカーソルを点滅させる
  *   （文字は最初から配置しておき、見えない状態から順に表示するので、レイアウトは動かない）
  * - 視覚効果を減らす設定（prefers-reduced-motion）の場合は最初から全文を表示
- * - パターンの切り替えは fv_patterns.js
  */
 const TYPE_INTERVAL = 75; // 1文字あたり（ミリ秒）
 const LINE_PAUSE = 250; // 改行時の間（ミリ秒）
@@ -22,7 +21,9 @@ function splitChars(line) {
     });
 }
 
-export function typeCatch(catchEl) {
+export default function initFvCatch(selector = '#firstview .fv__catch') {
+    const catchEl = document.querySelector(selector);
+    if (!catchEl) return;
     const lines = [...catchEl.querySelectorAll('.fv__catch-line')];
     if (!lines.length) return;
 

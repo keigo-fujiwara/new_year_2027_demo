@@ -1,14 +1,15 @@
-import CustomLinkHandler from '../common/custom_link.js?v=20261124055551';
-import initLineFollow from './components/line_follow.js?v=20261124055551';
-import initFvPattern from './components/fv_patterns.js?v=20261124055551';
-import initSchedule from './components/schedule.js?v=20261124055551';
-import initCourseModal from './components/course_modal.js?v=20261124055551';
-import initVoiceModal from './components/voice_modal.js?v=20261124055551';
-import initMarquee from './tools/marquee.js?v=20261124055551';
+import CustomLinkHandler from '../common/custom_link.js?v=20261124062330';
+import initApplyFormLinks from './components/apply_form.js?v=20261124062330';
+import initLineFollow from './components/line_follow.js?v=20261124062330';
+import initFvCatch from './components/fv_catch.js?v=20261124062330';
+import initSchedule from './components/schedule.js?v=20261124062330';
+import initCourseModal from './components/course_modal.js?v=20261124062330';
+import initVoiceModal from './components/voice_modal.js?v=20261124062330';
+import initMarquee from './tools/marquee.js?v=20261124062330';
 
 document.addEventListener('DOMContentLoaded', async () => {
     // ファーストビュー（キャッチコピーの演出）
-    initFvPattern();
+    initFvCatch();
     // 追従LINEボタン
     initLineFollow();
     // 無限スライド（授業風景・メッセージ）
@@ -19,6 +20,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     initVoiceModal();
     // 校舎・日時（JSONから描画）
     await initSchedule();
-    // カスタムリンクの実行（スケジュール内の申込ボタンも対象にするため描画後に実行）
+    // メール申込フォームへのリンク（スケジュール内の申込ボタンも対象にするため描画後に実行）
+    initApplyFormLinks();
+    // カスタムリンクの実行（フッターの規約類）
     new CustomLinkHandler().applyLinks();
 });

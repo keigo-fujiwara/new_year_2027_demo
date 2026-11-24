@@ -6,7 +6,7 @@
  * - #schedule-<校舎キー> へのリンクで該当タブを開いてスクロール（FVのエリアリンク用）
  * - 校舎カードの「Googleマップで確認する」で地図を開閉
  */
-import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261124055551';
+import { loadSchedule, getDow, escapeHtml } from '../tools/schedule_data.js?v=20261124062330';
 
 const HASH_PREFIX = '#schedule-';
 
@@ -109,7 +109,7 @@ function renderPanel(campus, items, data, isActive, mapOpen) {
         <div class="schedule__panel" id="schedule-${campus.key}" role="tabpanel" aria-labelledby="schedule-tab-${campus.key}" ${isActive ? '' : 'hidden'}>
             <div class="schedule__main">
                 <ul class="schedule__list">${rows || '<li class="schedule__empty">日程は近日公開予定です</li>'}</ul>
-                <a class="schedule__apply" data-custom-link data-path="/lp/trial-lesson" data-has-refer href="#" target="apply_form">この校舎の無料講座に申し込む</a>
+                <a class="schedule__apply" data-apply-form href="#" target="apply_form">この校舎の無料講座に申し込む</a>
             </div>
             ${renderCampusCard(campus, mapOpen)}
         </div>`;
