@@ -12,7 +12,7 @@ import {
     courseIdsByEventName,
     getDow,
     escapeHtml,
-} from '../tools/schedule_data.js?v=20261128094508';
+} from '../tools/schedule_data.js?v=20261128101549';
 
 const HASH_PREFIX = '#schedule-';
 
