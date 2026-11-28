@@ -641,23 +641,20 @@ template {
   .apply-bar__btn {
     padding-bottom: 0.1em;
     align-items: center;
+    background: linear-gradient(90deg, #ff5a36, #f39c1f);
     border: 1.5px solid #fff;
     border-radius: 999px;
     color: #fff;
     display: flex;
     flex: 1 1 0;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     height: 48px;
     justify-content: center;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
+    margin: 0 auto;
+    max-width: 360px;
     text-decoration: none;
-  }
-  .apply-bar__btn--mail {
-    background: linear-gradient(90deg, #ff5a36, #f39c1f);
-  }
-  .apply-bar__btn--line {
-    background: #06c755;
   }
 }
 .fv {
@@ -1627,14 +1624,22 @@ html.is-modal-open {
 @media (max-width: 767px) {
   .cta--final {
     border-bottom-width: 14px;
-    padding: 22px 20px 20px;
+    padding: 28px 16px 26px;
   }
   .cta--final .cta__actions {
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 10px;
   }
   .cta--final .cta__btn {
-    font-size: 18px;
-    height: 54px;
+    flex: 1 1 0;
+    font-size: clamp(13px, 3.9vw, 16px);
+    height: 52px;
+    letter-spacing: 0.02em;
+    width: auto;
+  }
+  .cta--final .cta__btn--line {
+    order: 0;
   }
 }
 .cta__heading {
@@ -1707,7 +1712,7 @@ html.is-modal-open {
 }
 
 @media (max-width: 767px) {
-  .cta {
+  .cta:not(.cta--final) {
     display: none;
   }
 }
@@ -2186,10 +2191,7 @@ html.is-modal-open {
     padding: calc(2px - 0.05em) 7px calc(2px + 0.05em);
   }
   .schedule__apply {
-    font-size: 15px;
-    margin-top: 20px;
-    padding: calc(0.55em - 0.05em) 0 calc(0.55em + 0.05em);
-    width: min(100%, 285px);
+    display: none;
   }
   .schedule__campus-photo {
     aspect-ratio: 327/210;
