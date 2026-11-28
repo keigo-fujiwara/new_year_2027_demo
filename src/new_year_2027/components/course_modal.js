@@ -10,7 +10,7 @@ import {
     loadCourses,
     getDow,
     escapeHtml,
-} from '../tools/schedule_data.js?v=20261128101549';
+} from '../tools/schedule_data.js?v=20261128102457';
 
 /**
  * "2/23" → 「2月」「23日」「(火祝)」

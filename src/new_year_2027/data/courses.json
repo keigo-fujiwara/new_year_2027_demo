@@ -10,7 +10,7 @@
             "works": [
                 {
                     "src": "../assets/images/new_year_2027/png/vibe_coding_work.png",
-                    "alt": "バイブコーディングで中学生が作ったゲームの紹介ページ"
+                    "alt": "AIとコードの画面を描いたバイブコーディングのイメージ図"
                 },
                 {
                     "src": "../assets/images/new_year_2027/jpg/vibe_coding.jpg",
@@ -34,8 +34,8 @@
                     "alt": "Webページの作品"
                 },
                 {
-                    "src": "../assets/images/new_year_2027/jpg/OriginalWebPage.jpg",
-                    "alt": "Webページの制作画面"
+                    "src": "../assets/images/new_year_2027/png/OriginalWebPage.png",
+                    "alt": "「キミの未来をHACKしよう」と表示したWebページの画面"
                 }
             ],
             "scheduleEvents": ["Webページ開発体験"]
@@ -68,8 +68,8 @@
             ],
             "works": [
                 {
-                    "src": "../assets/images/new_year_2027/jpg/mee_mee_run.jpg",
-                    "alt": "メェーメェーランゲームのプレイ画面"
+                    "src": "../assets/images/new_year_2027/png/mee_mee_run.png",
+                    "alt": "メェーメェーランゲームのタイトル画面"
                 },
                 {
                     "src": "../assets/images/new_year_2027/png/mee_mee_run_sheep.png",
