@@ -1,11 +1,11 @@
-import CustomLinkHandler from '../common/custom_link.js?v=20261124165539';
-import initApplyFormLinks from './components/apply_form.js?v=20261124165539';
-import initLineFollow from './components/line_follow.js?v=20261124165539';
-import initFvCatch from './components/fv_catch.js?v=20261124165539';
-import initSchedule from './components/schedule.js?v=20261124165539';
-import initCourseModal from './components/course_modal.js?v=20261124165539';
-import initVoiceModal from './components/voice_modal.js?v=20261124165539';
-import initMarquee from './tools/marquee.js?v=20261124165539';
+import CustomLinkHandler from '../common/custom_link.js?v=20261128052837';
+import initApplyFormLinks from './components/apply_form.js?v=20261128052837';
+import initLineFollow from './components/line_follow.js?v=20261128052837';
+import initFvCatch from './components/fv_catch.js?v=20261128052837';
+import initSchedule from './components/schedule.js?v=20261128052837';
+import initCourseModal from './components/course_modal.js?v=20261128052837';
+import initVoiceModal from './components/voice_modal.js?v=20261128052837';
+import initMarquee from './tools/marquee.js?v=20261128052837';
 
 document.addEventListener('DOMContentLoaded', async () => {
     // ファーストビュー（キャッチコピーの演出）
