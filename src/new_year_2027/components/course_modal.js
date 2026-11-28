@@ -10,7 +10,7 @@ import {
     loadCourses,
     getDow,
     escapeHtml,
-} from '../tools/schedule_data.js?v=20261128090929';
+} from '../tools/schedule_data.js?v=20261128094508';
 
 /**
  * "2/23" → 「2月」「23日」「(火祝)」
@@ -112,6 +112,8 @@ export default async function initCourseModal(modalSelector = '#course-modal') {
         trigger.addEventListener('click', () =>
             open(trigger.dataset.course, trigger)
         );
+        // iPhoneのSafariは touchstart の登録がないと、押している間の :active が効かない
+        trigger.addEventListener('touchstart', () => {}, { passive: true });
     });
 
     $('.course-modal__close').addEventListener('click', () => modal.close());
