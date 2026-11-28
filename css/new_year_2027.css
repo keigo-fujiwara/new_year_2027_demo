@@ -1736,6 +1736,14 @@ html.is-modal-open {
 @media (max-width: 767px) {
   .flow__heading {
     font-size: 19px;
+    margin-inline: -24px;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 359px) {
+  .flow__heading {
+    letter-spacing: 0;
+    margin-inline: -30px;
   }
 }
 .flow__list {
