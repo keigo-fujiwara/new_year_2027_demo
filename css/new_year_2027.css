@@ -2084,33 +2084,6 @@ html.is-modal-open {
   padding: 24px 0;
   text-align: center;
 }
-.schedule__apply {
-  background: linear-gradient(90deg, #ff5a36, #f39c1f);
-  border-radius: 999px;
-  color: #fff;
-  display: block;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  margin: 20px auto 0;
-  max-width: 100%;
-  padding: calc(0.55em - 0.05em) 0 calc(0.55em + 0.05em);
-  text-align: center;
-  text-decoration: none;
-  transition: transform 0.2s, filter 0.2s;
-  width: 246px;
-}
-.schedule__apply:hover {
-  filter: brightness(1.08);
-  transform: translateY(-2px);
-}
-@media (max-width: 767px) {
-  .schedule__apply {
-    font-size: 15px;
-    padding: 0.8em 0;
-    width: min(100%, 320px);
-  }
-}
 .schedule__campus {
   background: #fff;
   border-radius: 8px;
@@ -2243,9 +2216,6 @@ html.is-modal-open {
   }
 }
 @media (max-width: 767px) {
-  .schedule__apply {
-    display: none;
-  }
   .schedule__campus-photo {
     aspect-ratio: 327/210;
   }
